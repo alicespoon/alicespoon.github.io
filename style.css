@@ -1,3 +1,6 @@
+html {
+  font-size: 16px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -27,8 +30,8 @@ a {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
-  line-height: 47px;
+  font-size: 2rem;
+  line-height: 3rem;
 
   color: #000000;
   text-decoration: none;
@@ -50,4 +53,10 @@ span,
 
 a:hover {
   color: blue;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 8px;
+  }
 }
