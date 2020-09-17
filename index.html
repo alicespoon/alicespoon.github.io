@@ -17,11 +17,94 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1>alice spoon</h1>
-      <span>coming soon</span>
-      <a href="mailto:work@alicespoon.ru" class="mail">work@alicespoon.ru</a>
+    <nav class="menu">
+      <a onclick="show(event.target, '#hockey')">зур хоккей</a>
+      <a onclick="show(event.target, '#hse')">hse design</a>
+      <a onclick="show(event.target, '#dlt')">dlt lookbook</a>
+      <a onclick="show(event.target, '#less')">less magazine</a>
+      <a onclick="show(event.target, '#posters')">posters</a>
+    </nav>
+
+    <main class="main item show">
+      <h1 class="logo">alice spoon</h1>
       <a href="tel:+79991312336" class="tel">+7 999 131 23 36</a>
-    </div>
+      <a href="mailto:work@alicespoon.ru" class="mail">work@alicespoon.ru</a>
+    </main>
+
+    <section id="hockey" class="item">
+      <img src="./pics/hockey/1.svg" alt="" class="pic wide" />
+      <video src="./pics/hockey/2.mp4" class="pic wide" loop></video>
+      <img src="./pics/hockey/3.jpg" alt="" class="pic wide" />
+      <div class="wide">
+        <img src="./pics/hockey/4_1.jpg" alt="" class="pic" />
+        <img src="./pics/hockey/4_2.jpg" alt="" class="pic" />
+      </div>
+      <img src="./pics/hockey/5.jpg" alt="" class="pic wide" />
+      <div class="wide">
+        <video src="./pics/hockey/6_1.mp4" class="pic" loop></video>
+        <img src="./pics/hockey/6_2.jpg" alt="" class="pic" />
+      </div>
+      <img src="./pics/hockey/7.jpg" alt="" class="pic wide" />
+      <img src="./pics/hockey/8.svg" alt="" class="pic wide" />
+      <img src="./pics/hockey/9.jpg" alt="" class="pic wide" />
+      <div class="wide">
+        <video src="./pics/hockey/10_1.mp4" class="pic" loop></video>
+        <img src="./pics/hockey/10_2.jpg" alt="" class="pic" />
+      </div>
+      <img src="./pics/hockey/11.jpg" alt="" class="pic wide" />
+    </section>
+
+    <section id="hse" class="item">
+      <div class="wide">
+        <img src="./pics/xylo/1_1.jpg" alt="" class="pic" />
+        <img src="./pics/xylo/1_2.jpg" alt="" class="pic" />
+      </div>
+      <div class="wide">
+        <img src="./pics/xylo/1_3.jpg" alt="" class="pic" />
+        <img src="./pics/xylo/1_4.jpg" alt="" class="pic" />
+      </div>
+      <img src="./pics/xylo/2.jpg" alt="" class="pic wide" />
+      <video src="./pics/xylo/3.mp4" class="pic wide" loop></video>
+      <img src="./pics/xylo/4.jpg" alt="" class="pic wide" />
+      <video src="./pics/xylo/5.mp4" class="pic wide" loop></video>
+      <img src="./pics/xylo/6.jpg" alt="" class="pic wide" />
+    </section>
+
+    <section id="dlt" class="item">
+      <img src="./pics/dlt/1.jpg" alt="" class="pic wide" />
+      <img src="./pics/dlt/2.jpg" alt="" class="pic wide" />
+      <img src="./pics/dlt/3.jpg" alt="" class="pic wide" />
+      <video src="./pics/dlt/4.mp4" class="pic wide" loop></video>
+      <img src="./pics/dlt/5.jpg" alt="" class="pic wide" />
+      <img src="./pics/dlt/6.jpg" alt="" class="pic wide" />
+      <div class="wide">
+        <video src="./pics/dlt/7_1.mp4" class="pic" loop></video>
+        <video src="./pics/dlt/7_2.mp4" class="pic" loop></video>
+      </div>
+    </section>
+
+    <section id="less" class="item">
+      <img src="./pics/less/1.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/2.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/3.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/4.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/5.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/6.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/7.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/8.jpg" alt="" class="pic wide" />
+      <img src="./pics/less/9.jpg" alt="" class="pic wide" />
+    </section>
+
+    <section id="posters" class="item">
+      <img src="./pics/posters/1.jpg" alt="" class="pic" />
+      <img src="./pics/posters/2.jpg" alt="" class="pic" />
+      <video src="./pics/posters/3.mp4" class="pic" loop></video>
+      <img src="./pics/posters/4.jpg" alt="" class="pic" />
+      <video src="./pics/posters/5.mp4" class="pic" loop></video>
+      <img src="./pics/posters/6.jpg" alt="" class="pic" />
+      <img src="./pics/posters/7.jpg" alt="" class="pic" />
+    </section>
+
+    <script src="./index.js"></script>
   </body>
 </html>
