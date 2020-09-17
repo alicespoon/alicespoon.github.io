@@ -8,7 +8,7 @@ let items = document.querySelectorAll(".item");
 let initial = document.querySelector(".main");
 
 let buttons = document.querySelectorAll(".menu a");
-console.log(items);
+
 function show(btn, tag) {
   window.scrollTo(0, 0);
   items.forEach((e) => e.classList.remove("show"));
