@@ -112,6 +112,7 @@ div.wide .pic {
   flex-direction: row;
   width: calc(50% - 8px);
   align-self: center;
+  height: auto;
 }
 
 div.wide .pic:first-child {
