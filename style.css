@@ -105,7 +105,7 @@ section.item {
 
 div.wide {
   display: flex;
-  
+  align-self: center;
 }
 
 div.wide .pic {
