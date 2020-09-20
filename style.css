@@ -10,8 +10,8 @@ html {
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 16px;
-  margin: 0 20px;
+  column-gap: 0.67rem;
+  margin: 0 0.83rem;
 
   position: relative;
 }
@@ -116,7 +116,7 @@ div.wide .pic {
 }
 
 div.wide .pic:first-child {
-  margin-right: 16px;
+  margin-right: 0.67rem;
 }
 
 .wide {
@@ -130,7 +130,7 @@ div.wide .pic:first-child {
 .pic {
   display: inherit;
   width: 100%;
-  margin: 32px 0;
+  margin: 1.33rem 0;
 }
 
 .show {
