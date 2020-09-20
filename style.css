@@ -10,8 +10,8 @@ html {
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: .67rem;
-  margin: 0 .83rem;
+  column-gap: 16px;
+  margin: 0 20px;
 
   position: relative;
 }
@@ -105,19 +105,18 @@ section.item {
 
 div.wide {
   display: flex;
-  align-self: center;
-  height: auto;
+  align-self: flex-start;
 }
 
 div.wide .pic {
   flex-direction: row;
   width: calc(50% - 8px);
-  align-self: center;
   height: auto;
+  align-self: flex-start;
 }
 
 div.wide .pic:first-child {
-  margin-right: .67rem;
+  margin-right: 16px;
 }
 
 .wide {
@@ -131,7 +130,7 @@ div.wide .pic:first-child {
 .pic {
   display: inherit;
   width: 100%;
-  margin: 1.33rem 0;
+  margin: 32px 0;
 }
 
 .show {
