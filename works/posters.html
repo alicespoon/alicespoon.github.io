@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>alice spoon</title>
+    <title>posters | alice spoon</title>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -47,32 +47,59 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./favicons/favicon-32.png"
+      href="../favicons/favicon-32.png"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
+  <body class="works">
     <nav class="menu">
       <h1 class="logo">
-        <a href="./index.html">alice spoon</a>
+        <a href="../index.html">alice spoon</a>
       </h1>
-      <a href="works/hockey.html">салават юлаев</a>
-      <a href="works/planet.html">планетарий</a>
-      <a href="works/kids.html">kids festival</a>
-      <a href="works/dlt.html">dlt lookbook</a>
-      <a href="works/posters.html">posters</a>
-      <a href="works/less.html">less magazine</a>
+      <div class="links">
+        <a href="./hockey.html">салават юлаев</a>
+        <a href="./planet.html">планетарий</a>
+        <a href="./kids.html">kids festival</a>
+        <a href="./dlt.html">dlt lookbook</a>
+        <a href="./posters.html" class="active">posters</a>
+        <a href="./less.html">less magazine</a>
+      </div>
     </nav>
 
-    <main class="main">
-      <a href="tel:+79991312336">+7 999 131 23 36</a>
-      <a href="mailto:work@alicespoon.ru">work@alicespoon.ru</a>
-    </main>
+    <section id="posters" class="item">
+      <img src="../pics/posters/1.jpg" alt="" class="pic" />
 
-    <script src="./index.js"></script>
+      <img src="../pics/posters/2.jpg" alt="" class="pic" />
+
+      <video
+        src="../pics/posters/3.mp4"
+        class="pic"
+        poster="../pics/posters/3_poster.jpg"
+        playsinline
+        loop
+        muted
+      ></video>
+
+      <img src="../pics/posters/4.jpg" alt="" class="pic" />
+
+      <video
+        src="../pics/posters/5.mp4"
+        class="pic"
+        poster="../pics/posters/5_poster.jpg"
+        playsinline
+        loop
+        muted
+      ></video>
+
+      <img src="../pics/posters/6.jpg" alt="" class="pic" />
+
+      <img src="../pics/posters/7.jpg" alt="" class="pic" />
+    </section>
+
+    <script src="../index.js"></script>
   </body>
 </html>
