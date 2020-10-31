@@ -15,8 +15,6 @@ let options = {
   threshold: 0.5,
 };
 
-// if (isSafari) options.threshold = 1;
-
 let playVideo = function (entries, observer) {
   for (let entry of entries) {
     if (entry.target.autoplay) {
@@ -35,7 +33,6 @@ for (let video of videos) {
   if (isMobile || isIPadOS) {
     video.controls = true;
   } else {
-    console.log("test");
     observer.observe(video);
   }
 }

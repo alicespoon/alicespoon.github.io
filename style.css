@@ -90,6 +90,9 @@ a:hover {
 #dlt {
   background-color: #1a1a1a;
 }
+picture img {
+  width: 100%;
+}
 
 .pic {
   display: inherit;
