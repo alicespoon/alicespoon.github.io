@@ -92,6 +92,7 @@ a:hover {
 }
 picture img {
   width: 100%;
+  align-self: flex-start;
 }
 
 .pic {
