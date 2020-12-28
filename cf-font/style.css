@@ -1,6 +1,13 @@
 @font-face {
   font-family: "CoFo Sans";
-  src:  url('./Regular.woff2') format('woff2'),
-        url('./Regular.woff') format('woff'),
-        url('./Regular.ttf') format('truetype');
+  src:  url('./sans.woff2') format('woff2'),
+        url('./sans.woff') format('woff'),
+        url('./sans.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "CoFo Pixel";
+  src:  url('./pixel.woff2') format('woff2'),
+        url('./pixel.woff') format('woff'),
+        url('./pixel.otf') format('opentype');
 }
