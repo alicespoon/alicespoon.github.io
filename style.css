@@ -176,6 +176,6 @@ div.wide .pic:first-child {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #fff;
+    background-color: #000;
   }
 }
