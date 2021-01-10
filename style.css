@@ -173,3 +173,9 @@ div.wide .pic:first-child {
     grid-column: 1 / -1;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #fff;
+  }
+}
