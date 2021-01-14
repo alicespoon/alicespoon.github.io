@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
     <style>
+        @media (prefers-color-scheme: light) {
+            .a { fill: #000 }
+        }
         @media (prefers-color-scheme: dark) {
             .a { fill: #fff }
         }
-        .a { fill: #000}
     </style>
     <path class="a" d="M6 16V26C3.79086 26 2 24.2091 2 22L2 20C2 17.7909 3.79086 16 6 16Z" />
     <path class="a" d="M22 26C22 28.2091 20.2091 30 18 30H10C7.79086 30 6 28.2091 6 26H22Z"/>
