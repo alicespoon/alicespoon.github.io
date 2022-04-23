@@ -63,30 +63,94 @@
 
     <main>
       <div class="about">
-        <p class="lead">
-          My&nbsp;name is&nbsp;Alisa, I&rsquo;m a&nbsp;graphic designer
-          in&nbsp;St.&nbsp;Petersburg, now&nbsp;I work
-          as&nbsp;a&nbsp;communication designer at&nbsp;<a
-            href="https://redmadrobot.ru/"
-            class="accent-color"
-            >red_mad_robot</a
-          >. Write to&nbsp;me&nbsp;if&nbsp;you are interested
-          in&nbsp;cooperation
-        </p>
+        <div class="lead">
+          <p>
+            Hello! My name is Alisa. I'm a multidisciplinary designer with over
+            6 years experience. Currently working as a senior communication
+            designer at
+            <a href="https://redmadrobot.ru/" class="accent-color"
+              >red_mad_robot</a
+            >.
+          </p>
+          <p>
+            Previously I working at the marketing team in department
+            <a href="https://tsum.ru/" class="accent-color">store</a> and at the
+            local
+            <a href="https://sobaka.ru/" class="accent-color">magazine</a>.
+          </p>
+        </div>
       </div>
 
       <div class="cases">
-        <a href="#" class="heading">red_mad_robot</a>
+        <a href="#" onmouseover="random(this)" class="heading"
+          >red_&#8203;mad_&#8203;robot</a
+        >
+        <img
+          src="https://i.picsum.photos/id/225/442/255.jpg?hmac=7bGdT0DYLDPz56mlx2py6M5PyjbdvdR21addz8JtztM"
+          alt=""
+          class="preview"
+        />
+
         <a
           href="./works/robopractice/robopractice.html"
+          onmouseover="random(this)"
           class="heading robopractice-link"
-          >robopractice</a
+          >robo&#8203;practice</a
         >
-        <a href="#" class="heading">posters</a>
-        <a href="#" class="heading">planetarium</a>
-        <a href="#" class="heading">kids festival</a>
-        <a href="#" class="heading">dlt lookbook</a>
-        <!-- <img src="./robopractice.png" alt="" class="robopractice" /> -->
+        <img
+          src="./robopractice.png"
+          width="442px"
+          height="255px"
+          alt=""
+          class="preview"
+        />
+
+        <a href="#" onmouseover="random(this)" class="heading">posters</a>
+        <video
+          src="./poster.mp4"
+          width="350px"
+          height="500px"
+          autoplay
+          muted
+          loop
+          class="preview"
+        ></video>
+
+        <a
+          href="./works/planetarium/planetarium.html"
+          onmouseover="random(this)"
+          class="heading"
+          >planeta&#8203;rium</a
+        >
+        <img
+          src="https://i.picsum.photos/id/642/442/255.jpg?hmac=9Jno38ah0vnSAao2lhKniK_RsSHZ75Mly66aZzdLC5A"
+          alt=""
+          class="preview"
+        />
+
+        <a
+          href="./works/kids/kids.html"
+          onmouseover="random(this)"
+          class="heading"
+          >kids &#8203;festival</a
+        >
+        <img
+          src="https://i.picsum.photos/id/59/442/255.jpg?hmac=aBLRTbTpJSTzbW131MLPqkrYs2uM7EeZFIap_4TQ7WM"
+          alt=""
+          class="preview"
+        />
+
+        <a
+          href="./works/dlt/dlt.html"
+          onmouseover="random(this)"
+          class="heading"
+          >dlt &#8203;lookbook</a
+        >
+        <img
+          src="https://i.picsum.photos/id/605/442/255.jpg?hmac=uDnNU4HYP77jUzc_-SoLRQS1CfqnFkd6pyARW_GLngg"
+          alt=""
+          class="preview"
+        />
       </div>
 
       <div class="contacts">
@@ -98,5 +162,24 @@
         >
       </div>
     </main>
+
+    <script>
+      function randomInteger(min, max) {
+        let rand = min + Math.random() * (max + 1 - min);
+        return Math.floor(rand);
+      }
+
+      function random(elem) {
+        let preview = elem.nextElementSibling;
+
+        let bottonBorder = window.innerHeight - preview.clientHeight;
+        let rightBorder = window.innerWidth - preview.clientWidth;
+
+        preview.style.top = `${randomInteger(1, bottonBorder)}px`;
+        preview.style.left = `${randomInteger(1, rightBorder)}px`;
+
+        console.log(preview.style.top, preview.style.left);
+      }
+    </script>
   </body>
 </html>
