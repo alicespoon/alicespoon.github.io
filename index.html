@@ -65,51 +65,55 @@
       <div class="about">
         <div class="lead">
           <p>
-            Hello! My name is Alisa. I'm a multidisciplinary designer with over
-            6 years experience. Currently working as a senior communication
-            designer at
-            <a href="https://redmadrobot.ru/" class="accent-color"
+            Hello! My&nbsp;name is&nbsp;Alisa.<br />
+            I&rsquo;m a&nbsp;multidisciplinary designer with over 6&nbsp;years
+            experience. Currently working as&nbsp;a&nbsp;senior communication
+            designer at&nbsp;<a
+              href="https://redmadrobot.ru/"
+              class="accent-color"
+              target="_blank"
               >red_mad_robot</a
             >.
           </p>
           <p>
-            Previously I working at the marketing team in department
-            <a href="https://tsum.ru/" class="accent-color">store</a> and at the
-            local
-            <a href="https://sobaka.ru/" class="accent-color">magazine</a>.
+            Previously I&nbsp;worked in&nbsp;the the marketing team in&nbsp;the
+            luxury department
+            <a href="https://tsum.ru/" class="accent-color" target="_blank"
+              >store</a
+            >
+            and at&nbsp;the&nbsp;local print
+            <a href="https://sobaka.ru/" class="accent-color" target="_blank"
+              >magazine</a
+            >.
           </p>
         </div>
       </div>
 
       <div class="cases">
-        <a href="#" onmouseover="random(this)" class="heading"
+        <a
+          href="./works/red_mad_robot/red_mad_robot.html"
+          onmouseover="showPreview(this)"
+          class="heading robopractice-link"
           >red_&#8203;mad_&#8203;robot</a
         >
-        <img
-          src="https://i.picsum.photos/id/225/442/255.jpg?hmac=7bGdT0DYLDPz56mlx2py6M5PyjbdvdR21addz8JtztM"
-          alt=""
-          class="preview"
-        />
+        <img src="./previews/rmr.png" alt="" class="preview" />
 
         <a
           href="./works/robopractice/robopractice.html"
-          onmouseover="random(this)"
+          onmouseover="showPreview(this)"
           class="heading robopractice-link"
           >robo&#8203;practice</a
         >
-        <img
-          src="./robopractice.png"
-          width="442px"
-          height="255px"
-          alt=""
-          class="preview"
-        />
+        <img src="./previews/robopractice.png" alt="" class="preview" />
 
-        <a href="#" onmouseover="random(this)" class="heading">posters</a>
+        <a
+          href="./works/posters/posters.html"
+          onmouseover="showPreview(this)"
+          class="heading"
+          >posters</a
+        >
         <video
-          src="./poster.mp4"
-          width="350px"
-          height="500px"
+          src="./previews/posters.mp4"
           autoplay
           muted
           loop
@@ -118,43 +122,40 @@
 
         <a
           href="./works/planetarium/planetarium.html"
-          onmouseover="random(this)"
+          onmouseover="showPreview(this)"
           class="heading"
           >planeta&#8203;rium</a
         >
-        <img
-          src="https://i.picsum.photos/id/642/442/255.jpg?hmac=9Jno38ah0vnSAao2lhKniK_RsSHZ75Mly66aZzdLC5A"
-          alt=""
-          class="preview"
-        />
+        <img src="./previews/planetarium.webp" alt="" class="preview" />
 
         <a
           href="./works/kids/kids.html"
-          onmouseover="random(this)"
+          onmouseover="showPreview(this)"
           class="heading"
           >kids &#8203;festival</a
         >
-        <img
-          src="https://i.picsum.photos/id/59/442/255.jpg?hmac=aBLRTbTpJSTzbW131MLPqkrYs2uM7EeZFIap_4TQ7WM"
-          alt=""
-          class="preview"
-        />
+        <img src="./previews/kids.png" alt="" class="preview" />
 
         <a
           href="./works/dlt/dlt.html"
-          onmouseover="random(this)"
+          onmouseover="showPreview(this)"
           class="heading"
           >dlt &#8203;lookbook</a
         >
-        <img
-          src="https://i.picsum.photos/id/605/442/255.jpg?hmac=uDnNU4HYP77jUzc_-SoLRQS1CfqnFkd6pyARW_GLngg"
-          alt=""
+        <video
+          src="./previews/dlt.mp4"
+          autoplay
+          muted
+          loop
           class="preview"
-        />
+        ></video>
       </div>
 
       <div class="contacts">
-        <a class="accent-color" href="https://instagram.com/alicespoon.design/"
+        <a
+          class="accent-color"
+          href="https://instagram.com/alicespoon.design/"
+          target="_blank"
           >@alicespoon.design</a
         >
         <a class="accent-color" href="mailto:work@alicespoon.ru"
@@ -169,7 +170,7 @@
         return Math.floor(rand);
       }
 
-      function random(elem) {
+      function showPreview(elem) {
         let preview = elem.nextElementSibling;
 
         let bottonBorder = window.innerHeight - preview.clientHeight;
@@ -177,8 +178,6 @@
 
         preview.style.top = `${randomInteger(1, bottonBorder)}px`;
         preview.style.left = `${randomInteger(1, rightBorder)}px`;
-
-        console.log(preview.style.top, preview.style.left);
       }
     </script>
   </body>

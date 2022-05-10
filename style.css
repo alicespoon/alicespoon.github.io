@@ -17,7 +17,7 @@ html {
   font-weight: 500;
   font-style: normal;
 
-  font-size: 16px;
+  font-size: 15px;
   line-height: 18px;
 }
 
@@ -86,7 +86,7 @@ main {
   width: -webkit-fill-available;
 }
 
-.gallery *:not(:first-child) {
+.gallery * {
   margin-top: 8px;
 }
 
@@ -267,7 +267,7 @@ p + p {
 
 @media screen and (min-width: 1200px) {
   html {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 20px;
   }
 
