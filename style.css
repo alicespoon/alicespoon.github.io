@@ -64,7 +64,7 @@ main {
   padding: 0 8px;
 }
 
-.cases a {
+.cases .heading {
   display: block;
 }
 
@@ -110,7 +110,7 @@ p + p {
 }
 
 @media screen and (min-width: 0) and (max-width: 799px) {
-  .cases .heading:hover {
+  .cases a:hover {
     color: var(--accent-color);
   }
 
@@ -180,7 +180,7 @@ p + p {
     position: relative;
   }
 
-  .cases .heading:hover::before {
+  .cases a:hover::before {
     content: "→";
     color: var(--accent-color);
 
@@ -191,7 +191,7 @@ p + p {
     left: calc(0px - (60px + 12px));
   }
 
-  .cases .heading:hover + .preview {
+  .cases a:hover + .preview {
     display: block;
     position: absolute;
   }
@@ -276,11 +276,11 @@ p + p {
     line-height: 60px;
   }
 
-  .heading .cases {
+  .cases .heading {
     padding: 16px 0;
   }
 
-  .cases .heading:hover::before {
+  .cases a:hover::before {
     left: -76px;
   }
 
@@ -294,10 +294,6 @@ p + p {
 
   .cases {
     margin-top: -16px;
-  }
-
-  .cases .heading {
-    padding: 16px 0;
   }
 
   .gallery + .next {
