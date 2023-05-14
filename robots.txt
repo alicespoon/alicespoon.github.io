@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /cf-font/
+Allow: /
+Host: https://alicespoon.com
+sitemap: https://alicespoon.com/sitemap.xml
