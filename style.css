@@ -272,8 +272,8 @@ p + p {
   }
 
   .heading {
-    font-size: 72px;
-    line-height: 60px;
+    font-size: 100px;
+    line-height: 0.833;
   }
 
   .cases .heading {
@@ -281,7 +281,7 @@ p + p {
   }
 
   .cases a:hover::before {
-    left: -76px;
+    left: -84px;
   }
 
   .lead:first-child {
