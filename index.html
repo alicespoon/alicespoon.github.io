@@ -18,8 +18,8 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:title" content="alice spoon portfolio" />
-    <meta property="og:site_name" content="alicespoon.ru" />
-    <meta property="og:url" content="https://alicespoon.ru" />
+    <meta property="og:site_name" content="alicespoon.com" />
+    <meta property="og:url" content="https://alicespoon.com" />
     <meta
       property="og:description"
       content="Alice is a multidisciplinary designer with over 6 years of experience. Currently working as a senior communication designer at red_mad_robot."
@@ -101,12 +101,12 @@
 
       <div class="cases">
         <a
-          href="./red_mad_robot/"
+          href="./careerminds/"
           onmouseover="showPreview(this)"
           class="heading robopractice-link"
-          >red_&#8203;mad_&#8203;robot</a
+          >career&#8203;minds</a
         >
-        <img src="./previews/rmr.png" alt="" class="preview" />
+        <img src="./previews/careerminds.png" alt="" class="preview" />
 
         <a
           href="./robopractice/"
@@ -127,6 +127,14 @@
           class="preview"
         ></video>
 
+        <a
+          href="./red_mad_robot/"
+          onmouseover="showPreview(this)"
+          class="heading robopractice-link"
+          >red_&#8203;mad_&#8203;robot</a
+        >
+        <img src="./previews/rmr.png" alt="" class="preview" />
+
         <a href="./planetarium/" onmouseover="showPreview(this)" class="heading"
           >planeta&#8203;rium</a
         >
@@ -137,7 +145,7 @@
         >
         <img src="./previews/kids.png" alt="" class="preview" />
 
-        <a href="./dlt/" onmouseover="showPreview(this)" class="heading"
+        <!-- <a href="./dlt/" onmouseover="showPreview(this)" class="heading"
           >dlt &#8203;lookbook</a
         >
         <video
@@ -146,7 +154,7 @@
           muted
           loop
           class="preview"
-        ></video>
+        ></video> -->
       </div>
 
       <div class="contacts">
@@ -156,23 +164,23 @@
           target="_blank"
           >@alicespoon.design</a
         >
-        <a class="accent-color" href="mailto:work@alicespoon.ru"
-          >work@alicespoon.ru</a
+        <a class="accent-color" href="mailto:work@alicespoon.com"
+          >work@alicespoon.com</a
         >
       </div>
     </main>
 
     <script>
       function randomInteger(min, max) {
-        let rand = min + Math.random() * (max + 1 - min);
+        const rand = min + Math.random() * (max + 1 - min);
         return Math.floor(rand);
       }
 
       function showPreview(elem) {
-        let preview = elem.nextElementSibling;
+        const preview = elem.nextElementSibling;
 
-        let bottonBorder = window.innerHeight - preview.clientHeight;
-        let rightBorder = window.innerWidth - preview.clientWidth;
+        const bottonBorder = window.innerHeight - preview.clientHeight;
+        const rightBorder = window.innerWidth - preview.clientWidth;
 
         preview.style.top = `${randomInteger(1, bottonBorder)}px`;
         preview.style.left = `${randomInteger(1, rightBorder)}px`;

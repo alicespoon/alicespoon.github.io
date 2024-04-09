@@ -213,6 +213,7 @@ p + p {
 
   .about {
     grid-column: 1 / 2;
+    grid-row: 1 / 3;
 
     position: sticky;
     top: 72px;
