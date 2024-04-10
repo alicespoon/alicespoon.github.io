@@ -23,6 +23,10 @@ html {
 
 /* COMMON */
 
+video {
+  pointer-events: none;
+}
+
 .accent-color {
   color: var(--accent-color);
 }
