@@ -31,7 +31,7 @@ video {
   color: var(--accent-color);
 }
 a.accent-color:hover {
-  color: #001aff;
+  color: color-mix(in srgb, var(--accent-color) 80%, black);
 }
 
 .heading {
@@ -87,7 +87,9 @@ main {
 
 .gallery * {
   display: block;
-  width: -webkit-fill-available;
+  width: 100%;
+  width: -webkit-fill-available; /* For WebKit browsers */
+  width: -moz-available; /* For Firefox */
 }
 
 .gallery * {
@@ -203,7 +205,10 @@ p + p {
   .logo {
     position: sticky;
     top: 0;
-    width: -webkit-fill-available;
+    width: 100%;
+    width: -webkit-fill-available; /* For older WebKit browsers */
+    width: -moz-available; /* For Firefox */
+    width: stretch; /* Standard version (future-proof) */
   }
 
   main {
@@ -249,8 +254,10 @@ p + p {
 
   .contacts {
     position: fixed;
-
-    top: calc(100vh - 52px);
+    bottom: 0;
+    padding: 4px 0;
+    width: 12rem;
+    background-color: white;
   }
 
   .logo + main {
