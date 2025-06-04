@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>alice spoon.</title>
     <meta
       name="description"
@@ -25,139 +24,408 @@
       content="Alice is a multidisciplinary designer with over 6 years of experience. Currently working as a senior communication designer at red_mad_robot."
     />
     <meta property="og:type" content="profile" />
-    <meta property="og:image" content="/og.jpg" />
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
-        m[i].l = 1 * new Date();
-        (k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a);
-      })(
-        window,
-        document,
-        "script",
-        "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
-      );
-      ym(67996456, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-      });
-    </script>
-    <noscript
-      ><div>
-        <img
-          src="https://mc.yandex.ru/watch/67996456"
-          style="position: absolute; left: -9999px"
-          alt=""
-        /></div
-    ></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      .thumbnail-preview {
+        position: fixed;
+        z-index: 100;
+        display: none;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        max-width: 100%;
+        max-height: 100vh;
+      }
 
-    <link
-      rel="preload"
-      href="https://use.typekit.net/dqe5fpn.css"
-      as="style"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://use.typekit.net/dqe5fpn.css" />
+      /* We'll handle display with JavaScript instead of CSS */
+      .thumbnail-trigger {
+        cursor: text;
+      }
 
-    <link rel="stylesheet" href="style.css" />
+      .links {
+        display: none;
+      }
+
+      /* Links will be shown via JavaScript */
+      .links.visible {
+        display: inline;
+      }
+    </style>
   </head>
-  <body>
-    <h1 class="logo">
-      <span class="accent-color">
-        <span class="alice">alice</span> <span class="sp">sp</span
-        ><span class="o">o</span><span class="on">on.</span></span
-      >
-    </h1>
-
-    <main>
-      <div class="about">
-        <div class="lead">
-          <p>
-            Hello! My name is Alisa. I'm&nbsp;a&nbsp;multidisciplinary designer
-            with over 9 years experience. Currently working as a lead marketing
-            designer at&nbsp;<a
-              href="https://career.io/"
-              class="accent-color"
-              target="_blank"
-              >career.io</a
-            >.
-          </p>
-
-          <p>
-            I can create visual communication for a project or a brand, design a
-            website, a book, or a magazine. Also, I’m passionate about 3D
-            and&nbsp;motion design.
-          </p>
-        </div>
-      </div>
-
-      <div class="cases">
-        <a href="./resume-io/" onmouseover="showPreview(this)" class="heading"
-          >resume.io</a
+  <body class="bg-stone-100 mx-2 my-4">
+    <header
+      class="mb-24 md:mb-52 text-xl sm:text-2xl md:text-3xl lg:text-[40px] max-w-6xl"
+    >
+      <p class="mb-4">
+        Hi! I'm
+        <a
+          href=""
+          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
+          style="background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%)"
+          onmouseenter="showPreview(this)"
+          onmouseleave="hidePreview(this)"
         >
-        <img src="./previews/resume-io.webp" alt="" class="preview" />
-
-        <a href="./careerminds/" onmouseover="showPreview(this)" class="heading"
-          >career&#8203;minds</a
-        >
-        <img src="./previews/careerminds.webp" alt="" class="preview" />
-
-        <a href="./posters/" onmouseover="showPreview(this)" class="heading"
-          >posters</a
+          Alisa Frolova,</a
         >
         <video
-          src="./previews/posters.webm"
-          autoplay
+          class="rounded-[64px] thumbnail-preview"
           muted
           loop
-          class="preview"
-        ></video>
-
-        <a
-          href="./robopractice/"
-          onmouseover="showPreview(this)"
-          class="heading robopractice-link"
-          >robo&#8203;practice</a
+          playsinline
+          autoplay
         >
-        <img src="./previews/robopractice.webp" alt="" class="preview" />
+          <source src="./content/thumbnails/Alisa.webm" type="video/webm" />
+        </video>
+        a multidisciplinary designer based in Lisbon, Portugal. Currently
+        working as a lead marketing designer at career.io.
+      </p>
 
+      <p class="mb-4">
+        I love building strong visual solutions for digital products and
+        marketing teams. I also work on digital campaigns, social media and
+        video content, often in collaboration with motion designers and creative
+        agencies. I'm always curious to explore new formats and love
         <a
-          href="./red_mad_robot/"
-          onmouseover="showPreview(this)"
-          class="heading robopractice-link"
-          >red_&#8203;mad_&#8203;robot</a
+          href=""
+          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
+          style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
+          onmouseenter="showPreview(this)"
+          onmouseleave="hidePreview(this)"
+          >experimenting</a
         >
-        <img src="./previews/rmr.webp" alt="" class="preview" />
+        <img
+          class="thumbnail-preview"
+          src="./content/thumbnails/Experimenting.webp"
+          width="400px"
+          height="400px"
+          alt="Experimenting thumbnail"
+        />
+        with visuals, tools and approaches.
+      </p>
+      <p class="mb-4">
+        My works have been recognised in international competitions, including
+        winning an award at the
+        <a
+          href=""
+          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
+          style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
+          onmouseenter="showPreview(this)"
+          onmouseleave="hidePreview(this)"
+          >Luga Poster Biennale,</a
+        >
+        <img
+          class="thumbnail-preview"
+          src="./content/thumbnails/LUGA.gif"
+          alt="LUGA Poster Biennale thumbnail"
+        />
+        being featured at the
+        <a
+          href=""
+          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
+          style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
+          onmouseenter="showPreview(this)"
+          onmouseleave="hidePreview(this)"
+          >Forward Festival</a
+        >
+        <img
+          class="rounded-[64px] thumbnail-preview"
+          src="./content/thumbnails/Forward.webp"
+          alt="Forward Festival thumbnail"
+        />
+        and selected for various exhibitions worldwide.
+      </p>
+      <p class="mb-4">
+        If it's a match,
+        <a
+          href=""
+          class="text-white rounded-full px-3 text-nowrap contact-me"
+          style="background: linear-gradient(90deg, #ff6a28 0%, #8a7bff 100%)"
+          >contact me!</a
+        >
+        <span class="links">
+          <a
+            href="mailto:work@alicespoon.com"
+            class="text-white rounded-full px-3 text-nowrap"
+            style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
+            >email</a
+          >
+          <a
+            href="https://www.instagram.com/alicespoon.design/"
+            class="text-white rounded-full px-3 text-nowrap"
+            style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
+            >instagram</a
+          >
+          <a
+            href="./cv_alisa_frolova.pdf"
+            class="text-white rounded-full px-3 text-nowrap w-fit"
+            style="
+              background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%);
+            "
+          >
+            cv</a
+          ></span
+        >
+      </p>
+    </header>
+
+    <div class="mt-4">
+      <section class="flex flex-col md:flex-row">
+        <aside
+          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
+        >
+          <p class="mb-4">resume.io</p>
+          <a
+            href="#red_mad_robot"
+            class="text-nowrap text-orange-600 hover:text-orange-700 mb-4"
+            >next project →</a
+          >
+        </aside>
+        <main class="md:w-3/4 flex flex-col gap-2">
+          <img
+            src="./content/1-1.webp"
+            alt="Resume.io project image 1"
+            class="w-full rounded-3xl mb-6"
+          />
+
+          <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
+            <p>
+              Resume.io is a tool for creating resumes and cover letters. It’s
+              part of Career.io: a platform that brings together multiple
+              career-focused services.
+            </p>
+
+            <p>
+              I work closely with product and marketing teams, bringing in
+              design-driven improvements. Reimagined our video graphics from
+              scratch, refreshed the visual identity for social media, and led
+              creative directions for podcast visuals, AI-generated imagery
+              instead of stock photos, and more.
+            </p>
+          </div>
+
+          <video
+            poster="./content/1-2-screenshot.webp"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-3xl"
+          >
+            <source src="./content/1-2.webm" type="video/webm" />
+          </video>
+
+          <img
+            src="./content/1-3.webp"
+            alt="Resume.io project image 3"
+            class="w-full rounded-3xl"
+          />
+          <img
+            src="./content/1-4.webp"
+            alt="Resume.io project image 4"
+            class="w-full rounded-3xl"
+          />
+
+          <video
+            poster="./content/1-5-screenshot.webp"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-3xl"
+          >
+            <source src="./content/1-5.webm" type="video/webm" />
+          </video>
+
+          <img
+            src="./content/1-6.webp"
+            alt="Resume.io project image 6"
+            class="w-full rounded-3xl"
+          />
+          <img
+            src="./content/1-7.webp"
+            alt="Resume.io project image 7"
+            class="w-full rounded-3xl"
+          />
+          <img
+            src="./content/1-8.webp"
+            alt="Resume.io project image 8"
+            class="w-full rounded-3xl"
+          />
+          <img
+            src="./content/1-9.webp"
+            alt="Resume.io project image 9"
+            class="w-full rounded-3xl"
+          />
+        </main>
+      </section>
+
+      <section
+        id="red_mad_robot"
+        class="flex flex-col md:flex-row mt-12 md:mt-20"
+      >
+        <aside
+          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
+        >
+          <p class="mb-4">red_mad_robot</p>
+          <a
+            href="#posters"
+            class="text-nowrap text-orange-600 hover:text-orange-700 mb-4"
+            >next project →</a
+          >
+        </aside>
+        <main class="md:w-3/4 flex flex-col gap-2">
+          <video
+            poster="./content/2-1-screenshot.webp"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-3xl mb-6"
+          >
+            <source src="./content/2-1.webm" type="video/webm" />
+          </video>
+
+          <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
+            <p>
+              Red_mad_robot is digital partner for full cycle product
+              development. Company help to create award-winning digital products
+              and services for startups and well-established companies.
+            </p>
+
+            <p>
+              I am working as a part of red_mad_robot intercom team. I create
+              sites and communications in the company and work on many
+              recognisable styles for the events. I also love being a part of
+              the merch team. I also work with a marketing team and help to take
+              our style up a notch.
+            </p>
+          </div>
+
+          <img
+            src="./content/2-2.webp"
+            alt="Red_mad_robot project image 2"
+            class="w-full rounded-3xl"
+          />
+
+          <video
+            poster="./content/2-3-screenshot.webp"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-3xl"
+          >
+            <source src="./content/2-3.webm" type="video/webm" />
+          </video>
+
+          <img
+            src="./content/2-4.webp"
+            alt="Red_mad_robot project image 4"
+            class="w-full rounded-3xl"
+          />
+
+          <video
+            poster="./content/2-5-screenshot.webp"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-3xl"
+          >
+            <source src="./content/2-5.webm" type="video/webm" />
+          </video>
+
+          <img
+            src="./content/2-6.webp"
+            alt="Red_mad_robot project image 6"
+            class="w-full rounded-3xl"
+          />
+          <img
+            src="./content/2-7.webp"
+            alt="Red_mad_robot project image 7"
+            class="w-full rounded-3xl"
+          />
+        </main>
+      </section>
+
+      <section id="posters" class="flex flex-col md:flex-row mt-12 md:mt-20">
+        <aside
+          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
+        >
+          <p class="mb-4">posters</p>
+        </aside>
+        <main class="md:w-3/4 flex flex-col gap-2">
+          <img
+            src="./content/3-1.webp"
+            alt="Poster design image 1"
+            class="w-full mb-6"
+          />
+
+          <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
+            <p>
+              Outside of work, I am personally passionate about poster design,
+              which is where I explore bold visual ideas and experiment with
+              different techniques. I often combine 3D graphics, expressive
+              typography and unconventional layouts to create striking
+              compositions.
+            </p>
+
+            <p>
+              Many of these posters were created as part of various design
+              courses or self-initiated projects. I see this area as a
+              playground for creative freedom, and I regularly submit my work to
+              international design contests and exhibitions. This allows me to
+              sharpen my eye, break out of routine and stay connected to the
+              artistic side of visual design.
+            </p>
+          </div>
+
+          <img
+            src="./content/3-2.webp"
+            alt="Poster design image 2"
+            class="w-full"
+          />
+
+          <img
+            src="./content/3-3.webp"
+            alt="Poster design image 3"
+            class="w-full"
+          />
+        </main>
+      </section>
+    </div>
+    <footer
+      class="text-xl md:text-3xl mt-12 md:mt-40 flex flex-col md:flex-row items-start md:items-center"
+    >
+      <span class="md:w-1/4">2025</span>
+
+      <div class="flex flex-col md:flex-row gap-4">
+        <a
+          href="mailto:work@alicespoon.com"
+          class="text-white rounded-full px-3 text-nowrap w-fit"
+          style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
+          >work@alicespoon.com</a
+        >
+        <a
+          href="https://www.instagram.com/alicespoon.design/"
+          class="text-white rounded-full px-3 text-nowrap w-fit"
+          style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
+          >@alicespoon.design</a
+        >
+        <a
+          href="./cv_alisa_frolova.pdf"
+          class="text-white rounded-full px-3 text-nowrap w-fit"
+          style="
+            background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+          "
+        >
+          cv</a
+        >
       </div>
-
-      <div class="contacts">
-        <a class="accent-color" href="./cv_alisa_frolova.pdf" target="_blank"
-          >cv</a
-        >
-        <a
-          class="accent-color"
-          href="https://instagram.com/alicespoon.design/"
-          target="_blank"
-          >instagram</a
-        >
-        <a class="accent-color" href="mailto:work@alicespoon.com">email</a>
-      </div>
-    </main>
-
+    </footer>
     <script>
       function randomInteger(min, max) {
         const rand = min + Math.random() * (max + 1 - min);
@@ -167,12 +435,68 @@
       function showPreview(elem) {
         const preview = elem.nextElementSibling;
 
-        const bottonBorder = window.innerHeight - preview.clientHeight;
-        const rightBorder = window.innerWidth - preview.clientWidth;
+        // Make sure the preview is visible to calculate dimensions
+        preview.style.display = "block";
+        preview.style.opacity = "0";
 
-        preview.style.top = `${randomInteger(1, bottonBorder)}px`;
-        preview.style.left = `${randomInteger(1, rightBorder)}px`;
+        // For videos, we need to start playing to get proper dimensions
+        if (preview.tagName === "VIDEO") {
+          preview.play();
+        }
+
+        // Wait a bit to ensure dimensions are calculated
+        setTimeout(() => {
+          // Calculate safe boundaries to ensure the asset is fully visible
+          const bottomBorder = window.innerHeight - preview.offsetHeight;
+          const rightBorder = window.innerWidth - preview.offsetWidth;
+
+          // Ensure we don't have negative values (if asset is larger than viewport)
+          const maxTop = Math.max(0, bottomBorder);
+          const maxLeft = Math.max(0, rightBorder);
+
+          // Position randomly within safe boundaries
+          preview.style.top = `${randomInteger(0, maxTop)}px`;
+          preview.style.left = `${randomInteger(0, maxLeft)}px`;
+
+          // Make it visible
+          preview.style.opacity = "1";
+        }, 50);
       }
+
+      function hidePreview(elem) {
+        const preview = elem.nextElementSibling;
+
+        // Hide the preview
+        preview.style.display = "none";
+
+        // For videos, pause them when hidden to save resources
+        if (preview.tagName === "VIDEO") {
+          preview.pause();
+        }
+      }
+
+      // Initialize all videos on page load and set up contact links
+      document.addEventListener("DOMContentLoaded", () => {
+        // Preload videos
+        const videoThumbnails = document.querySelectorAll(
+          ".thumbnail-preview[muted]"
+        );
+        videoThumbnails.forEach((video) => {
+          if (video.tagName === "VIDEO") {
+            // Preload videos
+            video.load();
+          }
+        });
+
+        // Set up contact links to appear on hover and stay visible
+        const contactMe = document.querySelector(".contact-me");
+        const links = document.querySelector(".links");
+
+        // When hovering over contact-me, make links visible
+        contactMe.addEventListener("mouseenter", () => {
+          links.classList.add("visible");
+        });
+      });
     </script>
   </body>
 </html>

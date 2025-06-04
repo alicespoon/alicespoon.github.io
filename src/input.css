@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Custom Font Declaration */
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../font/PPNeueMontreal-Book.woff2") format("woff2"),
+    url("../font/PPNeueMontreal-Book.woff") format("woff"),
+    url("../font/PPNeueMontreal-Book.ttf") format("truetype"),
+    url("../font/PPNeueMontreal-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply the custom font to all text elements */
+@layer base {
+  html {
+    font-family: "PP Neue Montreal", system-ui, sans-serif;
+  }
+}
