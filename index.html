@@ -81,14 +81,6 @@
         cursor: text;
       }
 
-      .links {
-        display: none;
-      }
-
-      /* Links will be shown via JavaScript */
-      .links.visible {
-        display: inline;
-      }
     </style>
   </head>
   <body class="bg-stone-100 mx-2 my-4">
@@ -176,33 +168,10 @@
       <p class="mb-4">
         If it's a match,
         <a
-          href=""
+          href="/contact/"
           class="text-white rounded-full px-3 text-nowrap contact-me"
           style="background: linear-gradient(90deg, #ff6a28 0%, #8a7bff 100%)"
           >contact me!</a
-        >
-        <span class="links">
-          <a
-            href="mailto:work@alicespoon.com"
-            class="text-white rounded-full px-3 text-nowrap"
-            style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
-            >email</a
-          >
-          <a
-            href="https://www.instagram.com/alicespoon.design/"
-            class="text-white rounded-full px-3 text-nowrap"
-            style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
-            >instagram</a
-          >
-          <a
-            href="./cv_alisa_frolova.pdf"
-            class="text-white rounded-full px-3 text-nowrap w-fit"
-            style="
-              background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%);
-            "
-          >
-            cv</a
-          ></span
         >
       </p>
     </header>
@@ -514,7 +483,7 @@
         }
       }
 
-      // Initialize all videos on page load and set up contact links
+      // Initialize all videos on page load
       document.addEventListener("DOMContentLoaded", () => {
         // Preload videos
         const videoThumbnails = document.querySelectorAll(
@@ -527,14 +496,6 @@
           }
         });
 
-        // Set up contact links to appear on hover and stay visible
-        const contactMe = document.querySelector(".contact-me");
-        const links = document.querySelector(".links");
-
-        // When hovering over contact-me, make links visible
-        contactMe.addEventListener("mouseenter", () => {
-          links.classList.add("visible");
-        });
       });
     </script>
   </body>

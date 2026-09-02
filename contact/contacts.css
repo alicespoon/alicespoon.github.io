@@ -1,0 +1,476 @@
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../font/PPNeueMontreal-Book.woff2") format("woff2"),
+    url("../font/PPNeueMontreal-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color: #000;
+  background: #fafafa;
+  font-family: "PP Neue Montreal", system-ui, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #fafafa;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.contact-page {
+  display: flex;
+  width: 100%;
+  min-height: 2439px;
+  max-width: 1400px;
+  flex-direction: column;
+  padding: 15px 8px 15px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__portrait {
+  order: 1;
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.intro__copy {
+  order: 2;
+  width: min(346px, 100%);
+  margin-top: 33px;
+  color: #000;
+  font-size: 30px;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.intro-desktop-break {
+  display: none;
+}
+
+.resume-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 54px;
+}
+
+.details {
+  display: contents;
+}
+
+.resume-section h1,
+.resume-section h2,
+.award-region h3,
+.entries,
+.award-list,
+.mention-list {
+  margin: 0;
+  padding: 0;
+}
+
+.resume-section h1,
+.resume-section h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
+
+.award-region h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+}
+
+.entries,
+.award-list,
+.mention-list {
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+}
+
+.entries {
+  margin-top: 14px;
+}
+
+.entries li,
+.award-list li {
+  margin-bottom: 10px;
+}
+
+.entries li:last-child,
+.award-list li:last-child {
+  margin-bottom: 0;
+}
+
+.year {
+  display: block;
+}
+
+.entries a,
+.award-list a,
+.mention-list a {
+  color: #ff6a28;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: auto;
+}
+
+.experience {
+  order: 1;
+}
+
+.awards {
+  order: 2;
+  margin-top: 29px;
+}
+
+.education {
+  order: 3;
+  margin-top: 29px;
+}
+
+.mentions {
+  order: 4;
+  margin-top: 24px;
+}
+
+.awards-grid {
+  display: grid;
+  margin-top: 14px;
+  grid-template-columns: 1fr;
+}
+
+.awards-column {
+  display: contents;
+}
+
+.award-region {
+  margin-top: 30px;
+}
+
+.award-region--europe {
+  order: 1;
+  margin-top: 0;
+}
+
+.award-region--america {
+  order: 2;
+}
+
+.award-region--korea {
+  order: 3;
+}
+
+.award-region--russia {
+  order: 4;
+}
+
+.award-list li {
+  position: relative;
+}
+
+.with-trophy::before {
+  position: absolute;
+  top: 7px;
+  left: -2px;
+  width: 16px;
+  height: 14px;
+  background: url("./assets/trophy.svg") center / contain no-repeat;
+  content: "";
+  transform: none;
+}
+
+.with-trophy {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.mention-list {
+  margin-top: 10px;
+}
+
+.mention-list li + li {
+  margin-top: 10px;
+}
+
+.contact-links {
+  display: flex;
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 8.5px 8px;
+}
+
+.contact-pill {
+  display: inline-flex;
+  height: 32px;
+  flex: 0 0 auto;
+  align-items: center;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: -0.28px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contact-pill--email {
+  width: 299px;
+  justify-content: center;
+  background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%);
+}
+
+.contact-pill--instagram {
+  width: 258px;
+  justify-content: center;
+  background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%);
+}
+
+.contact-pill--linkedin {
+  width: 110px;
+  justify-content: center;
+  background: linear-gradient(90deg, #e7474a 0%, #3b6fea 100%);
+}
+
+.contact-pill--cv {
+  width: 73px;
+  justify-content: center;
+  gap: 4px;
+  background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%);
+}
+
+.contact-pill--cv img {
+  width: 13px;
+  height: 16px;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (hover: hover) {
+  .intro__copy:hover {
+    opacity: 0.65;
+  }
+
+  .entries a:hover,
+  .award-list a:hover,
+  .mention-list a:hover,
+  .contact-pill:hover {
+    opacity: 0.75;
+  }
+}
+
+a:focus-visible {
+  outline: 2px solid #3b6fea;
+  outline-offset: 3px;
+}
+
+@media (min-width: 640px) {
+  .contact-page {
+    min-height: 1693px;
+    padding-right: 11px;
+    padding-left: 9px;
+  }
+
+  .intro__portrait {
+    width: 201px;
+    height: 201px;
+    margin-left: 2px;
+  }
+
+  .intro__copy {
+    width: min(691px, 100%);
+    margin-top: 23px;
+  }
+
+  .resume-grid {
+    display: grid;
+    margin-top: 37px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience,
+  .education,
+  .mentions,
+  .awards {
+    order: initial;
+  }
+
+  .education {
+    margin-top: 54px;
+  }
+
+  .mentions {
+    margin-top: 42px;
+  }
+
+  .awards {
+    margin-top: 0;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .with-trophy {
+    padding-left: 0;
+    text-indent: 0;
+  }
+
+  .with-trophy::before {
+    left: -25px;
+    transform: none;
+  }
+
+  .contact-links {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-page {
+    min-height: 1109px;
+    padding-right: 15px;
+    padding-left: 9px;
+  }
+
+  .intro {
+    position: relative;
+    min-height: 145px;
+  }
+
+  .intro__copy {
+    order: 1;
+    width: min(919px, 67%);
+    margin-top: -1px;
+    font-size: 36px;
+  }
+
+  .intro-desktop-break {
+    display: initial;
+  }
+
+  .intro__portrait {
+    position: absolute;
+    top: 0;
+    right: min(0px, calc(1400px - 100vw));
+    order: 2;
+    width: 145px;
+    height: 145px;
+    margin: 0;
+  }
+
+  .resume-grid {
+    width: calc(100% + 16px);
+    margin-top: 20px;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0;
+  }
+
+  .education {
+    margin-top: 50px;
+  }
+
+  .mentions {
+    margin-top: 41px;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .awards-column {
+    display: block;
+  }
+
+  .award-region {
+    margin-top: 0;
+  }
+
+  .award-region + .award-region {
+    margin-top: 30px;
+  }
+
+  .award-region + .award-region.award-region--korea {
+    margin-top: 33.5px;
+  }
+
+  .awards-column:nth-child(2) {
+    padding-left: 0;
+  }
+
+  .contact-links {
+    min-height: 43px;
+    gap: 10px;
+  }
+
+  .contact-pill {
+    height: 40px;
+    border-radius: 30px;
+    font-size: 35px;
+    letter-spacing: -0.35px;
+  }
+
+  .contact-pill--email {
+    width: 372px;
+  }
+
+  .contact-pill--instagram {
+    width: 321px;
+  }
+
+  .contact-pill--linkedin {
+    width: 137px;
+  }
+
+  .contact-pill--cv {
+    width: 91px;
+  }
+
+  .contact-pill--cv img {
+    width: 16px;
+    height: 20px;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact-page {
+    width: 1400px;
+  }
+}
