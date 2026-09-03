@@ -81,6 +81,14 @@
         cursor: text;
       }
 
+      .links {
+        display: none;
+      }
+
+      .links.visible {
+        display: inline;
+      }
+
     </style>
   </head>
   <body class="bg-stone-100 mx-2 my-4">
@@ -171,8 +179,32 @@
           href="/contact/"
           class="text-white rounded-full px-3 text-nowrap contact-me"
           style="background: linear-gradient(90deg, #ff6a28 0%, #8a7bff 100%)"
+          aria-expanded="false"
+          aria-controls="contact-links"
           >contact me!</a
         >
+        <span class="links" id="contact-links">
+          <a
+            href="mailto:work@alicespoon.com"
+            class="text-white rounded-full px-3 text-nowrap"
+            style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
+            >email</a
+          >
+          <a
+            href="https://www.linkedin.com/in/alisa-frolova/"
+            class="text-white rounded-full px-3 text-nowrap"
+            style="background: linear-gradient(90deg, #e7474a 0%, #3b6fea 100%)"
+            target="_blank"
+            rel="noreferrer"
+            >linkedin</a
+          >
+          <a
+            href="./cv_alisa_frolova.pdf"
+            class="text-white rounded-full px-3 text-nowrap w-fit"
+            style="background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%)"
+            >cv</a
+          >
+        </span>
       </p>
     </header>
 
@@ -483,7 +515,7 @@
         }
       }
 
-      // Initialize all videos on page load
+      // Initialize all videos on page load and set up contact links
       document.addEventListener("DOMContentLoaded", () => {
         // Preload videos
         const videoThumbnails = document.querySelectorAll(
@@ -496,6 +528,16 @@
           }
         });
 
+        const contactMe = document.querySelector(".contact-me");
+        const links = document.querySelector(".links");
+
+        const revealContactLinks = () => {
+          links.classList.add("visible");
+          contactMe.setAttribute("aria-expanded", "true");
+        };
+
+        contactMe.addEventListener("mouseenter", revealContactLinks);
+        contactMe.addEventListener("focus", revealContactLinks);
       });
     </script>
   </body>
