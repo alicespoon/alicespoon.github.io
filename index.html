@@ -89,14 +89,39 @@
         display: inline;
       }
 
+      .rounded-preview {
+        border-radius: 32px;
+      }
+
+      .rounded-project {
+        border-radius: 12px;
+      }
+
+      .intro {
+        margin-bottom: 3rem;
+      }
+
+      @media (min-width: 768px) {
+        .intro {
+          margin-bottom: 160px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .intro {
+          font-size: 36px;
+          line-height: 1.4;
+        }
+      }
+
     </style>
   </head>
   <body class="bg-stone-100 mx-2 my-4">
     <header
-      class="mb-24 md:mb-52 text-xl sm:text-2xl md:text-3xl lg:text-[40px] max-w-6xl"
+      class="intro text-xl sm:text-2xl md:text-3xl max-w-6xl"
     >
       <p class="mb-4">
-        Hi! I'm
+        Hi! I’m
         <a
           href=""
           class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
@@ -107,23 +132,24 @@
           Alisa Frolova,</a
         >
         <video
-          class="rounded-[64px] thumbnail-preview"
+          class="rounded-preview thumbnail-preview"
           muted
           loop
           playsinline
           autoplay
         >
-          <source src="./content/thumbnails/Alisa.webm" type="video/webm" />
+          <source src="./content/thumbnails/new/Alisa.webm?v=20260911-1205" type="video/webm" />
         </video>
-        a multidisciplinary designer based in Lisbon, Portugal. Currently
-        working as a lead marketing designer at career.io.
+        a multidisciplinary designer based in Portugal with 10 years of
+        experience in brand design and visual communication.
       </p>
 
       <p class="mb-4">
-        I love building strong visual solutions for digital products and
-        marketing teams. I also work on digital campaigns, social media and
-        video content, often in collaboration with motion designers and creative
-        agencies. I'm always curious to explore new formats and love
+        I focus on shaping how brands look, communicate and evolve. I build
+        scalable systems for high-volume production and localisation, integrating
+        automation and AI into workflows. I also lead and mentor designers,
+        setting direction while remaining hands-on. I’m always curious to explore
+        new formats and love
         <a
           href=""
           class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
@@ -132,18 +158,19 @@
           onmouseleave="hidePreview(this)"
           >experimenting</a
         >
-        <img
-          class="thumbnail-preview"
-          src="./content/thumbnails/Experimenting.webp"
-          width="400px"
-          height="400px"
-          alt="Experimenting thumbnail"
-        />
+        <video
+          class="rounded-preview thumbnail-preview"
+          muted
+          loop
+          playsinline
+          autoplay
+        >
+          <source src="./content/thumbnails/new/Experimenting.webm" type="video/webm" />
+        </video>
         with visuals, tools and approaches.
       </p>
       <p class="mb-4">
-        My works have been recognised in international competitions, including
-        winning an award at the
+        My posters have been recognised internationally, including an award at the
         <a
           href=""
           class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
@@ -157,7 +184,7 @@
           src="./content/thumbnails/LUGA.gif"
           alt="LUGA Poster Biennale thumbnail"
         />
-        being featured at the
+        a feature at the
         <a
           href=""
           class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
@@ -167,11 +194,29 @@
           >Forward Festival</a
         >
         <img
-          class="rounded-[64px] thumbnail-preview"
+          class="rounded-preview thumbnail-preview"
           src="./content/thumbnails/Forward.webp"
           alt="Forward Festival thumbnail"
         />
-        and selected for various exhibitions worldwide.
+        and a Silver award at the US International Poster Biennial. One of my
+        animated posters was displayed on screens in
+        <a
+          href=""
+          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
+          style="background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%)"
+          onmouseenter="showPreview(this)"
+          onmouseleave="hidePreview(this)"
+          >Times Square, New York.</a
+        >
+        <video
+          class="rounded-preview thumbnail-preview"
+          muted
+          loop
+          playsinline
+          autoplay
+        >
+          <source src="./content/thumbnails/new/TimesSquare.webm" type="video/webm" />
+        </video>
       </p>
       <p class="mb-4">
         If it's a match,
@@ -224,7 +269,7 @@
           <img
             src="./content/1-1.webp"
             alt="Resume.io project image 1"
-            class="w-full rounded-3xl mb-6"
+            class="w-full rounded-project mb-6"
           />
 
           <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
@@ -249,7 +294,7 @@
             muted
             loop
             playsinline
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           >
             <source src="./content/1-2.webm" type="video/webm" />
           </video>
@@ -257,12 +302,12 @@
           <img
             src="./content/1-3.webp"
             alt="Resume.io project image 3"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
           <img
             src="./content/1-4.webp"
             alt="Resume.io project image 4"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
 
           <video
@@ -271,7 +316,7 @@
             muted
             loop
             playsinline
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           >
             <source src="./content/1-5.webm" type="video/webm" />
           </video>
@@ -279,22 +324,22 @@
           <img
             src="./content/1-6.webp"
             alt="Resume.io project image 6"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
           <img
             src="./content/1-7.webp"
             alt="Resume.io project image 7"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
           <img
             src="./content/1-8.webp"
             alt="Resume.io project image 8"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
           <img
             src="./content/1-9.webp"
             alt="Resume.io project image 9"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
         </main>
       </section>
@@ -320,7 +365,7 @@
             muted
             loop
             playsinline
-            class="w-full rounded-3xl mb-6"
+            class="w-full rounded-project mb-6"
           >
             <source src="./content/2-1.webm" type="video/webm" />
           </video>
@@ -344,7 +389,7 @@
           <img
             src="./content/2-2.webp"
             alt="Red_mad_robot project image 2"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
 
           <video
@@ -353,7 +398,7 @@
             muted
             loop
             playsinline
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           >
             <source src="./content/2-3.webm" type="video/webm" />
           </video>
@@ -361,7 +406,7 @@
           <img
             src="./content/2-4.webp"
             alt="Red_mad_robot project image 4"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
 
           <video
@@ -370,7 +415,7 @@
             muted
             loop
             playsinline
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           >
             <source src="./content/2-5.webm" type="video/webm" />
           </video>
@@ -378,12 +423,12 @@
           <img
             src="./content/2-6.webp"
             alt="Red_mad_robot project image 6"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
           <img
             src="./content/2-7.webp"
             alt="Red_mad_robot project image 7"
-            class="w-full rounded-3xl"
+            class="w-full rounded-project"
           />
         </main>
       </section>
@@ -525,6 +570,12 @@
 
       // Initialize all videos on page load and set up contact links
       document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".thumbnail-trigger").forEach((trigger) => {
+          trigger.addEventListener("click", (event) => {
+            event.preventDefault();
+          });
+        });
+
         // Preload videos
         const videoThumbnails = document.querySelectorAll(
           ".thumbnail-preview[muted]"
