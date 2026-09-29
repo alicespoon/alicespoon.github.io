@@ -132,3 +132,19 @@ if (contactBar && hero) {
   new ResizeObserver(scheduleContactVisibility).observe(hero);
   updateContactVisibility();
 }
+
+// Scroll to the top without leaving an anchor in the address bar.
+function clearTopHash() {
+  if (location.hash === '#top') {
+    history.replaceState(history.state, '', location.pathname + location.search);
+  }
+}
+clearTopHash();
+document.querySelectorAll('.back-to-top').forEach(link => {
+  link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
+    window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+  });
+});
