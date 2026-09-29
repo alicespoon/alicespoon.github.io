@@ -36,43 +36,15 @@ a {
 .contact-page {
   display: flex;
   width: 100%;
-  min-height: 2439px;
-  max-width: 1400px;
+  min-height: 2132px;
   flex-direction: column;
-  padding: 15px 8px 15px;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-}
-
-.intro__portrait {
-  order: 1;
-  width: 180px;
-  height: 180px;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-.intro__copy {
-  order: 2;
-  width: min(346px, 100%);
-  margin-top: 33px;
-  color: #000;
-  font-size: 30px;
-  line-height: 1.15;
-  text-decoration: none;
-}
-
-.intro-desktop-break {
-  display: none;
+  padding: 0 9px 40px;
 }
 
 .resume-grid {
   display: flex;
   flex-direction: column;
-  margin-top: 54px;
+  margin-top: 71px;
 }
 
 .details {
@@ -134,7 +106,7 @@ a {
 .entries a,
 .award-list a,
 .mention-list a {
-  color: #ff6a28;
+  color: rgba(143, 122, 246, .6);
   text-decoration: underline;
   text-decoration-thickness: from-font;
   text-underline-offset: auto;
@@ -200,14 +172,14 @@ a {
   left: -2px;
   width: 16px;
   height: 14px;
-  background: url("./assets/trophy.svg") center / contain no-repeat;
+  background: url("./assets/trophy-purple.svg") center / contain no-repeat;
   content: "";
   transform: none;
 }
 
 .with-trophy {
-  padding-left: 22px;
-  text-indent: 0;
+  padding-left: 0;
+  text-indent: 22px;
 }
 
 .mention-list {
@@ -220,12 +192,18 @@ a {
 
 .contact-links {
   display: flex;
-  margin-top: auto;
+  position: fixed;
+  left: 9px;
+  right: 9px;
+  bottom: calc(15px + env(safe-area-inset-bottom, 0px));
+  z-index: 1000;
+  pointer-events: none;
   flex-wrap: wrap;
   gap: 8.5px 8px;
 }
 
 .contact-pill {
+  pointer-events: auto;
   display: inline-flex;
   height: 32px;
   flex: 0 0 auto;
@@ -242,26 +220,26 @@ a {
 .contact-pill--email {
   width: 299px;
   justify-content: center;
-  background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%);
+  background: #8f7af6;
 }
 
 .contact-pill--instagram {
   width: 258px;
   justify-content: center;
-  background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%);
+  background: #8f7af6;
 }
 
 .contact-pill--linkedin {
   width: 110px;
   justify-content: center;
-  background: linear-gradient(90deg, #e7474a 0%, #3b6fea 100%);
+  background: #8f7af6;
 }
 
 .contact-pill--cv {
   width: 73px;
   justify-content: center;
   gap: 4px;
-  background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%);
+  background: #8f7af6;
 }
 
 .contact-pill--cv img {
@@ -291,186 +269,93 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-@media (min-width: 640px) {
-  .contact-page {
-    min-height: 1693px;
-    padding-right: 11px;
-    padding-left: 9px;
-  }
 
-  .intro__portrait {
-    width: 201px;
-    height: 201px;
-    margin-left: 2px;
-  }
+.contact-header { padding-top: 0; }
+.contact-page--embedded { margin-top: 140px; min-height: 1980px; }
+.contact-page--embedded .resume-grid { margin-top: 0; }
+@media (min-width: 700px) {
+  .contact-page { min-height: 1310px; padding: 6px 9px 24px; }
+  .resume-grid { display: grid; margin-top: 65px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 14px; }
+  .details { display: flex; flex-direction: column; }
+  .experience, .education, .mentions, .awards { order: initial; }
+  .education { margin-top: 54px; }
+  .mentions { margin-top: 42px; }
+  .awards { margin-top: 0; }
+  .with-trophy { padding-left: 0; text-indent: 0; }
+  .with-trophy::before { left: -22px; }
+  .contact-links { flex-wrap: wrap; }
+  .contact-page--embedded { min-height: 1158px; }
+}
+@media (min-width: 1100px) {
+  .contact-page { min-height: 947px; padding: 4px 9px 15px; }
+  .resume-grid { margin-top: 43px; grid-template-columns: calc(33.333% + 4px) minmax(0, 1fr); column-gap: 0; }
+  .education { margin-top: 44px; }
+  .awards-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .awards-column { display: block; }
+  .award-region { margin-top: 0; }
+  .award-region + .award-region { margin-top: 30px; }
+  .award-region--europe + .award-region { margin-top: 33px; }
+  .mentions { margin-top: 35px; }
+  .with-trophy::before { left: -25px; background-image: url("./assets/trophy-black.svg"); }
+  .contact-links { min-height: 43px; gap: 10px; }
+  .contact-pill { height: 40px; border-radius: 30px; font-size: 35px; letter-spacing: -.35px; }
+  .contact-pill--email { width: 372px; }
+  .contact-pill--instagram { width: 321px; }
+  .contact-pill--linkedin { width: 137px; }
+  .contact-pill--cv { width: 91px; }
+  .contact-pill--cv img { width: 16px; height: 20px; }
+  .desktop-only { display: initial; }
+  .contact-page--embedded { min-height: 819px; }
+}
 
-  .intro__copy {
-    width: min(691px, 100%);
-    margin-top: 23px;
-  }
+/* Leave the final content readable above the floating contact buttons. */
+.contact-page {
+  padding-bottom: calc(var(--contact-bar-height, 120px) + 240px + env(safe-area-inset-bottom, 0px));
+}
 
-  .resume-grid {
-    display: grid;
-    margin-top: 37px;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 8px;
-  }
+.back-to-top {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  align-self: flex-end;
+  justify-content: center;
+  border-radius: 50%;
+  background: #8f7af6;
+  font-size: 28px;
+  line-height: 1;
+}
+@media (min-width: 1100px) {
+  .back-to-top { width: 40px; height: 40px; font-size: 35px; }
+}
 
-  .details {
-    display: flex;
+.contact-row { display: contents; }
+@media (min-width: 700px) {
+  .contact-pill--email { order: 0; }
+  .contact-pill--instagram { order: 1; }
+  .contact-pill--linkedin { order: 2; }
+  .contact-pill--cv { order: 3; }
+  .back-to-top { order: 4; }
+}
+
+@media (max-width: 699px) {
+  .contact-links {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
-
-  .experience,
-  .education,
-  .mentions,
-  .awards {
-    order: initial;
+  .contact-links .contact-pill:not(.back-to-top) {
+    width: max-content;
+    min-width: 0;
+    padding-inline: 10px;
+    font-size: clamp(16px, 5vw, 20px);
+    letter-spacing: -.2px;
   }
-
-  .education {
-    margin-top: 54px;
-  }
-
-  .mentions {
-    margin-top: 42px;
-  }
-
-  .awards {
-    margin-top: 0;
-  }
-
-  .awards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .with-trophy {
-    padding-left: 0;
-    text-indent: 0;
-  }
-
-  .with-trophy::before {
-    left: -25px;
-    transform: none;
-  }
-
-  .contact-links {
-    flex-wrap: nowrap;
-  }
+  .contact-row { display: flex; gap: 8px; }
+  .back-to-top { position: absolute; right: 0; bottom: 0; }
 }
 
-@media (min-width: 1024px) {
-  .contact-page {
-    min-height: 1109px;
-    padding-right: 15px;
-    padding-left: 9px;
-  }
-
-  .intro {
-    position: relative;
-    min-height: 145px;
-  }
-
-  .intro__copy {
-    order: 1;
-    width: min(919px, 67%);
-    margin-top: -1px;
-    font-size: 36px;
-  }
-
-  .intro-desktop-break {
-    display: initial;
-  }
-
-  .intro__portrait {
-    position: absolute;
-    top: 0;
-    right: min(0px, calc(1400px - 100vw));
-    order: 2;
-    width: 145px;
-    height: 145px;
-    margin: 0;
-  }
-
-  .resume-grid {
-    width: calc(100% + 16px);
-    margin-top: 20px;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 0;
-  }
-
-  .education {
-    margin-top: 50px;
-  }
-
-  .mentions {
-    margin-top: 41px;
-  }
-
-  .awards-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .awards-column {
-    display: block;
-  }
-
-  .award-region {
-    margin-top: 0;
-  }
-
-  .award-region + .award-region {
-    margin-top: 30px;
-  }
-
-  .award-region + .award-region.award-region--korea {
-    margin-top: 33.5px;
-  }
-
-  .awards-column:nth-child(2) {
-    padding-left: 0;
-  }
-
-  .contact-links {
-    min-height: 43px;
-    gap: 10px;
-  }
-
-  .contact-pill {
-    height: 40px;
-    border-radius: 30px;
-    font-size: 35px;
-    letter-spacing: -0.35px;
-  }
-
-  .contact-pill--email {
-    width: 372px;
-  }
-
-  .contact-pill--instagram {
-    width: 321px;
-  }
-
-  .contact-pill--linkedin {
-    width: 137px;
-  }
-
-  .contact-pill--cv {
-    width: 91px;
-  }
-
-  .contact-pill--cv img {
-    width: 16px;
-    height: 20px;
-  }
-
-  .desktop-only {
-    display: initial;
-  }
-}
-
-@media (min-width: 1400px) {
-  .contact-page {
-    width: 1400px;
-  }
+@media (max-width: 699px) {
+  .awards, .education, .mentions { margin-top: 64px; }
+  .award-region:not(.award-region--europe) { margin-top: 48px; }
+  .entries, .awards-grid, .mention-list { margin-top: 20px; }
 }

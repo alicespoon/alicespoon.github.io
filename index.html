@@ -15,7 +15,7 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
 
     <meta property="og:title" content="Alisa Frolova Portfolio" />
     <meta property="og:site_name" content="alicespoon.com" />
@@ -40,6 +40,7 @@
 
         <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
+      if (["alicespoon.com", "www.alicespoon.com"].includes(location.hostname)) {
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -65,572 +66,259 @@
         accurateTrackBounce: true,
         webvisor: true,
       });
+      }
     </script>
-    <noscript
-      ><div>
-        <img
-          src="https://mc.yandex.ru/watch/67996456"
-          style="position: absolute; left: -9999px"
-          alt=""
-        /></div
-    ></noscript>
+
     <!-- /Yandex.Metrika counter -->
 
-    <link rel="stylesheet" href="./src/output.css" />
-    <style>
-      .thumbnail-preview {
-        position: fixed;
-        z-index: 100;
-        display: none;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        max-width: 100%;
-        max-height: 100vh;
-      }
-
-      /* We'll handle display with JavaScript instead of CSS */
-      .thumbnail-trigger {
-        cursor: text;
-      }
-
-      .links {
-        display: none;
-      }
-
-      .links.visible {
-        display: inline;
-      }
-
-      .rounded-preview {
-        border-radius: 32px;
-      }
-
-      .rounded-project {
-        border-radius: 12px;
-      }
-
-      .intro {
-        margin-bottom: 3rem;
-      }
-
-      @media (min-width: 768px) {
-        .intro {
-          margin-bottom: 160px;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .intro {
-          font-size: 36px;
-          line-height: 1.4;
-        }
-      }
-
-    </style>
+    <link rel="stylesheet" href="/contact/contacts.css?v=20260929" />
+    <link rel="stylesheet" href="/src/site.css?v=20260929" />
+    <script src="/src/site.js?v=20260929" defer></script>
   </head>
-  <body class="bg-stone-100 mx-2 my-4">
-    <header
-      class="intro text-xl sm:text-2xl md:text-3xl max-w-6xl"
-    >
-      <p class="mb-4">
-        Hi! I’m
-        <a
-          href=""
-          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
-          style="background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%)"
-          onmouseenter="showPreview(this)"
-          onmouseleave="hidePreview(this)"
-        >
-          Alisa Frolova,</a
-        >
-        <video
-          class="rounded-preview thumbnail-preview"
-          muted
-          loop
-          playsinline
-          autoplay
-        >
-          <source src="./content/thumbnails/new/Alisa.webm?v=20260911-1205" type="video/webm" />
-        </video>
-        a multidisciplinary designer based in Portugal with 10&nbsp;years of
-        experience in brand design and visual communication.
-      </p>
 
-      <p class="mb-4">
-        I focus on shaping how brands look, communicate and evolve. I build
-        scalable systems for high-volume production and localisation, integrating
-        automation and AI into workflows. I also lead and mentor designers,
-        setting direction while remaining hands-on. I’m always curious to explore
-        new formats and love
-        <a
-          href=""
-          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
-          style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
-          onmouseenter="showPreview(this)"
-          onmouseleave="hidePreview(this)"
-          >experimenting</a
-        >
-        <video
-          class="rounded-preview thumbnail-preview"
-          muted
-          loop
-          playsinline
-          autoplay
-        >
-          <source src="./content/thumbnails/new/Experimenting.webm" type="video/webm" />
-        </video>
-        with visuals, tools and approaches.
-      </p>
-      <p class="mb-4">
-        My posters have been recognised internationally, including an award at the
-        <a
-          href=""
-          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
-          style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
-          onmouseenter="showPreview(this)"
-          onmouseleave="hidePreview(this)"
-          >Luga Poster Biennale,</a
-        >
-        <img
-          class="thumbnail-preview"
-          src="./content/thumbnails/LUGA.gif"
-          alt="LUGA Poster Biennale thumbnail"
-        />
-        a feature at the
-        <a
-          href=""
-          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
-          style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
-          onmouseenter="showPreview(this)"
-          onmouseleave="hidePreview(this)"
-          >Forward Festival</a
-        >
-        <img
-          class="rounded-preview thumbnail-preview"
-          src="./content/thumbnails/Forward.webp"
-          alt="Forward Festival thumbnail"
-        />
-        and a Silver award at the US International Poster Biennial. One of my
-        animated posters was displayed on screens in
-        <a
-          href=""
-          class="text-white rounded-full px-3 text-nowrap thumbnail-trigger"
-          style="background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%)"
-          onmouseenter="showPreview(this)"
-          onmouseleave="hidePreview(this)"
-          >Times Square, New York.</a
-        >
-        <video
-          class="rounded-preview thumbnail-preview"
-          muted
-          loop
-          playsinline
-          autoplay
-        >
-          <source src="./content/thumbnails/new/TimesSquare.webm" type="video/webm" />
-        </video>
-      </p>
-      <p class="mb-4">
-        If it's a match,
-        <a
-          href="/contact/"
-          class="text-white rounded-full px-3 text-nowrap contact-me"
-          style="background: linear-gradient(90deg, #ff6a28 0%, #8a7bff 100%)"
-          aria-expanded="false"
-          aria-controls="contact-links"
-          >contact me!</a
-        >
-        <span class="links" id="contact-links">
-          <a
-            href="mailto:work@alicespoon.com"
-            class="text-white rounded-full px-3 text-nowrap"
-            style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
-            >email</a
-          >
-          <a
-            href="https://www.linkedin.com/in/alisa-frolova/"
-            class="text-white rounded-full px-3 text-nowrap"
-            style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
-            target="_blank"
-            rel="noreferrer"
-            >linkedin</a
-          >
-          <a
-            href="./cv_alisa_frolova.pdf?v=20260903"
-            class="text-white rounded-full px-3 text-nowrap w-fit"
-            style="background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%)"
-            >cv</a
-          >
-        </span>
-      </p>
-    </header>
-
-    <div class="mt-4">
-      <section id="paysend" class="flex flex-col md:flex-row">
-        <aside
-          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
-        >
-          <p class="mb-4">paysend</p>
-          <a
-            href="#resume_io"
-            class="text-nowrap text-orange-600 hover:text-orange-700 mb-4"
-            >next project →</a
-          >
-        </aside>
-        <main class="md:w-3/4 flex flex-col gap-2">
-          <img
-            src="./content/paysend/0-1.webp?v=44b32f93"
-            alt="Paysend project image 1"
-            class="w-full rounded-project"
-          />
-          <video autoplay muted loop playsinline class="w-full rounded-project">
-            <source src="./content/paysend/0-4.webm" type="video/webm" />
+  <body id="top" class="homepage">
+    <main>
+      <section class="hero" aria-label="About Alisa Frolova">
+        <a class="wordmark" href="/" aria-label="Alice Spoon — home">
+        <span aria-hidden="true" class="wordmark__a">a</span><span aria-hidden="true" class="wordmark__li">li</span><span aria-hidden="true" class="wordmark__ce">ce</span>
+        <span aria-hidden="true" class="wordmark__sp">sp</span><span aria-hidden="true" class="wordmark__o1">o</span><span aria-hidden="true" class="wordmark__o2">o</span><span aria-hidden="true" class="wordmark__n">n</span>
+      </a>
+        <div class="hero-copy">
+          <h1>Award-winning designer and <span class="text-nowrap"><span class="text-nowrap">art director</span> with a multidisciplinary</span> approach, shaping brands through visual ideas, communication and systems</h1>
+          <a class="about-link" href="#about">About</a>
+        </div>
+        <p id="drag-help" class="sr-only">Drag to move within the introduction. Use arrow keys to move a focused image; press Escape to reset it.</p>
+        <div class="collage-item collage-item--portrait" tabindex="0" role="group" aria-label="Move portrait of Alisa" aria-describedby="drag-help">
+          <video autoplay muted loop playsinline preload="metadata" width="1000" height="1000" poster="/content/new%20main/previews/Alisa.webp" aria-label="Animated portrait of Alisa Frolova"><source src="/content/new%20main/Alisa.webm" type="video/webm" /></video>
+        </div>
+        <div class="collage-item collage-item--times" tabindex="0" role="group" aria-label="Move Times Square video" aria-describedby="drag-help">
+          <video autoplay muted loop playsinline preload="metadata" width="1140" height="1400" poster="/content/new%20main/previews/Times.webp" aria-label="Animated poster on screens in Times Square"><source src="/content/new%20main/Times.webm" type="video/webm" /></video>
+        </div>
+        <div class="collage-item collage-item--poster" tabindex="0" role="group" aria-label="Move poster photograph" aria-describedby="drag-help"><img src="/content/new%20main/Bloom.webp" width="870" height="1024" alt="Purple and green Bloom poster among plants" draggable="false" /></div>
+        <div class="collage-item collage-item--experiment" tabindex="0" role="group" aria-label="Move purple experiment" aria-describedby="drag-help"><img src="/content/hero/experiment.svg" alt="Purple experimental composition in a selection frame" draggable="false" /></div>
+        <div class="collage-item collage-item--trophy" tabindex="0" role="group" aria-label="Move Luga trophy" aria-describedby="drag-help"><img src="/content/thumbnails/LUGA.gif" alt="Luga Poster Biennale Experimental category trophy" draggable="false" /></div>
+      </section>
+      <section id="works" class="works" aria-label="Works">
+        <h2 class="works-title" aria-label="Works"><span aria-hidden="true">w</span><span aria-hidden="true">or</span><span aria-hidden="true">k</span><span aria-hidden="true">s</span></h2>
+            <div class="projects">
+      <section id="paysend" class="project">
+        <header class="project-heading"><h2>paysend</h2><p>2025-now</p></header>
+        <div class="project-media">
+          <img src="/content/new%20main/1-1.webp" width="1920" height="1025" alt="Paysend project image 1" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1920" height="1080" poster="/content/new%20main/previews/1-2.webp" aria-label="Paysend project animation 2">
+            <source src="/content/new%20main/1-2.webm" type="video/webm" />
           </video>
-          <img
-            src="./content/paysend/0-3.webp?v=96df37f5"
-            alt="Paysend project image 3"
-            class="w-full rounded-project"
-          />
-          <video autoplay muted loop playsinline class="w-full rounded-project">
-            <source src="./content/paysend/0-2.webm" type="video/webm" />
+          <img src="/content/new%20main/1-3.webp" width="1920" height="1025" alt="Paysend project image 3" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1920" height="1080" poster="/content/new%20main/previews/1-4.webp" aria-label="Paysend project animation 4">
+            <source src="/content/new%20main/1-4.webm" type="video/webm" />
           </video>
-        </main>
+        </div>
       </section>
 
-      <section id="resume_io" class="flex flex-col md:flex-row mt-12 md:mt-20">
-        <aside
-          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
-        >
-          <p class="mb-4">resume.io</p>
-          <a
-            href="#red_mad_robot"
-            class="text-nowrap text-orange-600 hover:text-orange-700 mb-4"
-            >next project →</a
-          >
-        </aside>
-        <main class="md:w-3/4 flex flex-col gap-2">
-          <img
-            src="./content/1-1.webp"
-            alt="Resume.io project image 1"
-            class="w-full rounded-project mb-6"
-          />
-
-          <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
-            <p>
-              Resume.io is a tool for creating resumes and cover letters. It’s
-              part of Career.io: a platform that brings together multiple
-              career-focused services.
-            </p>
-
-            <p>
-              I work closely with product and marketing teams, bringing in
-              design-driven improvements. Reimagined our video graphics from
-              scratch, refreshed the visual identity for social media, and led
-              creative directions for podcast visuals, AI-generated imagery
-              instead of stock photos, and more.
-            </p>
-          </div>
-
-          <video
-            poster="./content/1-2-screenshot.webp"
-            autoplay
-            muted
-            loop
-            playsinline
-            class="w-full rounded-project"
-          >
-            <source src="./content/1-2.webm" type="video/webm" />
+      <section id="resume_io" class="project">
+        <header class="project-heading"><h2>resume.io</h2><p>2023–2025</p></header>
+        <div class="project-media">
+          <img src="/content/new%20main/2-1.webp" width="1920" height="1025" alt="Resume.io project image 1" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1920" height="1080" poster="/content/new%20main/previews/2-2.webp" aria-label="Resume.io project animation 2">
+            <source src="/content/new%20main/2-2.webm" type="video/webm" />
           </video>
-
-          <img
-            src="./content/1-3.webp"
-            alt="Resume.io project image 3"
-            class="w-full rounded-project"
-          />
-
-          <video
-            poster="./content/1-5-screenshot.webp"
-            autoplay
-            muted
-            loop
-            playsinline
-            class="w-full rounded-project"
-          >
-            <source src="./content/1-5.webm" type="video/webm" />
+          <img src="/content/new%20main/2-3.webp" width="1920" height="1025" alt="Resume.io project image 3" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1920" height="1080" poster="/content/new%20main/previews/2-4.webp" aria-label="Resume.io project animation 4">
+            <source src="/content/new%20main/2-4.webm" type="video/webm" />
           </video>
-
-          <img
-            src="./content/1-6.webp"
-            alt="Resume.io project image 6"
-            class="w-full rounded-project"
-          />
-          <img
-            src="./content/1-7.webp"
-            alt="Resume.io project image 7"
-            class="w-full rounded-project"
-          />
-          <img
-            src="./content/1-8.webp"
-            alt="Resume.io project image 8"
-            class="w-full rounded-project"
-          />
-        </main>
+          <img src="/content/new%20main/2-5.webp" width="1920" height="1025" alt="Resume.io project image 5" loading="lazy" decoding="async" />
+          <img src="/content/new%20main/2-6.webp" width="1920" height="1025" alt="Resume.io project image 6" loading="lazy" decoding="async" />
+          <img src="/content/new%20main/2-7.webp" width="1920" height="1025" alt="Resume.io project image 7" loading="lazy" decoding="async" />
+        </div>
       </section>
 
-      <section
-        id="red_mad_robot"
-        class="flex flex-col md:flex-row mt-12 md:mt-20"
-      >
-        <aside
-          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
-        >
-          <p class="mb-4">red_mad_robot</p>
-          <a
-            href="#posters"
-            class="text-nowrap text-orange-600 hover:text-orange-700 mb-4"
-            >next project →</a
-          >
-        </aside>
-        <main class="md:w-3/4 flex flex-col gap-2">
-          <video
-            poster="./content/2-1-screenshot.webp"
-            autoplay
-            muted
-            loop
-            playsinline
-            class="w-full rounded-project mb-6"
-          >
-            <source src="./content/2-1-loop.webm" type="video/webm" />
+      <section id="red_mad_robot" class="project">
+        <header class="project-heading"><h2>red_mad_robot</h2><p>2020–2023</p></header>
+        <div class="project-media">
+          <video autoplay muted loop playsinline preload="metadata" width="1152" height="680" poster="/content/new%20main/previews/3-1.webp" aria-label="Red_mad_robot project animation 1">
+            <source src="/content/2-1-loop.webm" type="video/webm" />
           </video>
-
-          <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
-            <p>
-              Red_mad_robot is digital partner for full cycle product
-              development. Company help to create award-winning digital products
-              and services for startups and well-established companies.
-            </p>
-
-            <p>
-              I am working as a part of red_mad_robot intercom team. I create
-              sites and communications in the company and work on many
-              recognisable styles for the events. I also love being a part of
-              the merch team. I also work with a marketing team and help to take
-              our style up a notch.
-            </p>
-          </div>
-
-          <img
-            src="./content/2-2.webp"
-            alt="Red_mad_robot project image 2"
-            class="w-full rounded-project"
-          />
-
-          <video
-            poster="./content/2-3-screenshot.webp"
-            autoplay
-            muted
-            loop
-            playsinline
-            class="w-full rounded-project"
-          >
-            <source src="./content/2-3.webm" type="video/webm" />
+          <img src="/content/new%20main/3-2.webp" width="1152" height="616" alt="Red_mad_robot project image 2" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1920" height="1080" poster="/content/new%20main/previews/3-3.webp" aria-label="Red_mad_robot project animation 3">
+            <source src="/content/new%20main/3-3.webm" type="video/webm" />
           </video>
-
-          <img
-            src="./content/2-4.webp"
-            alt="Red_mad_robot project image 4"
-            class="w-full rounded-project"
-          />
-
-          <video
-            poster="./content/2-5-screenshot.webp"
-            autoplay
-            muted
-            loop
-            playsinline
-            class="w-full rounded-project"
-          >
-            <source src="./content/2-5.webm" type="video/webm" />
+          <img src="/content/new%20main/3-4.webp" width="1152" height="616" alt="Red_mad_robot project image 4" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1152" height="616" poster="/content/new%20main/previews/3-5.webp" aria-label="Red_mad_robot project animation 5">
+            <source src="/content/new%20main/3-5.webm" type="video/webm" />
           </video>
-
-          <img
-            src="./content/2-6.webp"
-            alt="Red_mad_robot project image 6"
-            class="w-full rounded-project"
-          />
-          <img
-            src="./content/2-7.webp"
-            alt="Red_mad_robot project image 7"
-            class="w-full rounded-project"
-          />
-        </main>
+          <img src="/content/new%20main/3-6.webp" width="1920" height="1025" alt="Red_mad_robot project image 6" loading="lazy" decoding="async" />
+          <img src="/content/new%20main/3-7.webp" width="1152" height="616" alt="Red_mad_robot project image 7" loading="lazy" decoding="async" />
+        </div>
       </section>
 
-      <section id="posters" class="flex flex-col md:flex-row mt-12 md:mt-20">
-        <aside
-          class="text-xl md:text-3xl md:w-1/4 md:sticky md:top-2 md:h-screen flex flex-row md:flex-col justify-between"
-        >
-          <p class="mb-4">posters</p>
-        </aside>
-        <main class="md:w-3/4 flex flex-col gap-2">
-          <img
-            src="./content/3-1.webp"
-            alt="Poster design image 1"
-            class="w-full mb-6"
-          />
-
-          <div class="text-xl md:text-2xl mb-6 flex flex-col gap-2">
-            <p>
-              Outside of work, I am personally passionate about poster design,
-              which is where I explore bold visual ideas and experiment with
-              different techniques. I often combine 3D graphics, expressive
-              typography and unconventional layouts to create striking
-              compositions.
-            </p>
-
-            <p>
-              Many of these posters were created as part of various design
-              courses or self-initiated projects. I see this area as a
-              playground for creative freedom, and I regularly submit my work to
-              international design contests and exhibitions. This allows me to
-              sharpen my eye, break out of routine and stay connected to the
-              artistic side of visual design.
-            </p>
-          </div>
-
-          <img
-            src="./content/3-2.webp"
-            alt="Poster design image 2"
-            class="w-full"
-          />
-
-          <img
-            src="./content/3-3.webp"
-            alt="Poster design image 3"
-            class="w-full"
-          />
-        </main>
+      <section id="posters" class="project">
+        <header class="project-heading"><h2>posters</h2><p></p></header>
+        <div class="project-media poster-grid">
+          <video autoplay muted loop playsinline preload="metadata" width="1614" height="2304" poster="/content/new%20main/previews/4-1.webp" aria-label="Poster project animation 1">
+            <source src="/content/new%20main/4-1.webm" type="video/webm" />
+          </video>
+          <img src="/content/new%20main/4-2.webp" width="1614" height="2304" alt="Poster project image 2" loading="lazy" decoding="async" />
+          <img src="/content/new%20main/4-3.webp" width="1614" height="2306" alt="Poster project image 3" loading="lazy" decoding="async" />
+          <img src="/content/new%20main/4-4.webp" width="1614" height="2306" alt="Poster project image 4" loading="lazy" decoding="async" />
+          <img src="/content/new%20main/4-5.webp" width="1614" height="2304" alt="Poster project image 5" loading="lazy" decoding="async" />
+          <video autoplay muted loop playsinline preload="metadata" width="1614" height="2304" poster="/content/new%20main/previews/4-6.webp" aria-label="Poster project animation 6">
+            <source src="/content/new%20main/4-6.webm" type="video/webm" />
+          </video>
+        </div>
       </section>
     </div>
-    <footer
-      class="text-xl md:text-3xl mt-12 md:mt-40 flex flex-col md:flex-row items-start md:items-center"
-    >
-      <span class="md:w-1/4">2026</span>
 
-      <div class="flex flex-col md:flex-row gap-4">
-        <a
-          href="mailto:work@alicespoon.com"
-          class="text-white rounded-full px-3 text-nowrap w-fit"
-          style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
-          >work@alicespoon.com</a
-        >
-        <a
-          href="https://www.instagram.com/alicespoon.design/"
-          class="text-white rounded-full px-3 text-nowrap w-fit"
-          style="background: linear-gradient(90deg, #01b655 0%, #e76fd7 100%)"
-          >@alicespoon.design</a
-        >
-        <a
-          href="https://www.linkedin.com/in/alisa-frolova/"
-          class="text-white rounded-full px-3 text-nowrap w-fit"
-          style="background: linear-gradient(90deg, #3b6fea 0%, #e7474a 100%)"
-          target="_blank"
-          rel="noreferrer"
-          >linkedin</a
-        >
-        <a
-          href="./cv_alisa_frolova.pdf?v=20260903"
-          class="text-white rounded-full px-3 text-nowrap w-fit"
-          style="
-            background: linear-gradient(270deg, #ff6a28 0%, #8a7bff 100%);
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-          "
-        >
-          cv</a
-        >
+      </section>
+      <section id="about" class="contact-page contact-page--embedded" aria-label="Experience and contact details">
+              <div class="resume-grid">
+        <div class="details">
+          <section class="resume-section experience">
+            <h1>Experience</h1>
+            <ul class="entries">
+              <li>
+                <span class="year">2025-now</span>
+                <a href="https://paysend.com/" target="_blank" rel="noreferrer">paysend</a>, associate principal designer
+              </li>
+              <li>
+                <span class="year">2023–2025</span>
+                <a href="https://resume.io/" target="_blank" rel="noreferrer">resume.io</a>, lead marketing designer
+              </li>
+              <li>
+                <span class="year">2020–2023</span>
+                <a href="https://www.redmadrobot.com/" target="_blank" rel="noreferrer">red_mad_robot</a>, senior graphic designer
+              </li>
+              <li>
+                <span class="year">2018–2020</span>
+                <a href="https://www.tsum.ru/english/" target="_blank" rel="noreferrer">dlt (tsum moscow)</a>, marketing designer
+              </li>
+              <li>
+                <span class="year">2016–2018</span>
+                <a href="https://www.sobaka.ru/" target="_blank" rel="noreferrer">sobaka.ru</a>, graphic designer
+              </li>
+            </ul>
+          </section>
+
+          <section class="resume-section education">
+            <h2>Education</h2>
+            <ul class="entries">
+              <li>
+                <span class="year">2025</span>
+                <a href="https://www.typographic-printing-program.com/" target="_blank" rel="noreferrer">Typographic Printing Program</a><br />
+                with Dafi Kühne, Switzerland
+              </li>
+              <li>
+                <span class="year">2020–2026</span>
+                <a href="https://www.typographic-printing-program.com/" target="_blank" rel="noreferrer">Typomania School</a>, online
+              </li>
+              <li>
+                <span class="year">2020</span>
+                <a href="https://www.typographic-printing-program.com/" target="_blank" rel="noreferrer">HSE Art and Design School</a>, online
+              </li>
+            </ul>
+          </section>
+
+          <section class="resume-section mentions">
+            <h2>Mentions</h2>
+            <ul class="mention-list">
+              <li><a href="https://fontsinuse.com/uses/70072/5th-anniversary-of-the-bankov-poster-school-i" target="_blank" rel="noreferrer">Fonts In Use</a></li>
+              <li><a href="https://peopleofprint.com/general/no-clients-no-briefs-no-limits-a-moving-tribute-to-peter-bankov/" target="_blank" rel="noreferrer">People of Print</a></li>
+              <li><a href="https://www.printmag.com/daily-heller/the-daily-heller-give-my-avant-gardes-to-broadway/?fbclid=IwQ0xDSwLaJehleHRuA2FlbQIxMQABHkl7UsSZ_Ao_uZG-DwbmhjX91sOELu7qGeJJ4ROXyUBe4JILYKS8qkSX72Sr_aem_EkZ7wLLEVLjGXT-dDhSxGg" target="_blank" rel="noreferrer">Print Mag (The Daily Heller)</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="resume-section awards">
+          <h2>Exhibitions and awards</h2>
+          <div class="awards-grid">
+            <div class="awards-column awards-column--international">
+              <div class="award-region award-region--europe">
+                <h3>Europe</h3>
+                <ul class="award-list">
+                  <li class="with-trophy">
+                    <a href="https://lugaposterbiennale.org/" target="_blank" rel="noreferrer">Luga Poster Biennale</a>, Portugal<br />
+                    winner in the Experimental category, 2024
+                  </li>
+                  <li>
+                    <a href="https://apf.design/" target="_blank" rel="noreferrer">Antwerp Poster Festival</a>, Belgium<br />
+                    selected as one of 100 winners, 2026
+                  </li>
+                  <li>
+                    <a href="https://www.forward-festival.com/" target="_blank" rel="noreferrer">Forward Festival</a>, Germany and Austria<br />
+                    selected for the main festival exhibitions, 2024
+                  </li>
+                  <li>
+                    <a href="https://poster.co.pl/en/" target="_blank" rel="noreferrer">7th International Poster Biennale</a>, Poland<br />
+                    selected for the main exhibition, 2025
+                  </li>
+                </ul>
+              </div>
+
+              <div class="award-region award-region--korea">
+                <h3>South Korea</h3>
+                <ul class="award-list">
+                  <li>
+                    <a href="https://gallerybi.com/" target="_blank" rel="noreferrer">BI International Poster Art Biennale</a>,<br />
+                    selected as one of 100 winners, 2025
+                  </li>
+                </ul>
+              </div>
+
+              <div class="award-region award-region--russia">
+                <h3>Russia</h3>
+                <ul class="award-list">
+                  <li>
+                    <a href="https://www.goldenbee.org/en/" target="_blank" rel="noreferrer">Golden Bee</a>,<br />
+                    selected for the main exhibition,<br class="desktop-only" /> 2022, 2024, 2026
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="awards-column awards-column--americas">
+              <div class="award-region award-region--america">
+                <h3>North and South America</h3>
+                <ul class="award-list">
+                  <li class="with-trophy">
+                    <a href="https://www.posterstellars.com/winning-stellars-2026" target="_blank" rel="noreferrer">Poster Stellars</a>, USA<br />
+                    Grand Prix and Silver Award in Animation, 2026
+                  </li>
+                  <li class="with-trophy">
+                    <a href="https://www.usipb.com/edition-2025" target="_blank" rel="noreferrer">United States International Poster Biennial</a>,<br />
+                    Silver Award in Animation, 2025
+                  </li>
+                  <li class="with-trophy">
+                    <a href="https://www.commarts.com/project/39255/the-school-of-peter-bankov-promo-group-project" target="_blank" rel="noreferrer">Communication Arts Magazine</a>, USA<br />
+                    Best in Self-Promotion, 2026
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/p/DLnDOk2s7A1/?img_index=1" target="_blank" rel="noreferrer">Art Innovation x Bankov Poster School</a>,<br />
+                    presented on a screen in Times Square,<br class="desktop-only" /> New York, 2025
+                  </li>
+                  <li>
+                    <a href="https://www.bicebebolivia.com/" target="_blank" rel="noreferrer">BICeBé</a>, Bolivia<br />
+                    selected for the main exhibition, 2025
+                  </li>
+                  <li>
+                    <a href="https://intercontinentalbienal.org/" target="_blank" rel="noreferrer">Intercontinental Bienal</a>,<br />
+                    selected for the main exhibition, 2023, 2025
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </footer>
-    <script>
-      function randomInteger(min, max) {
-        const rand = min + Math.random() * (max + 1 - min);
-        return Math.floor(rand);
-      }
 
-      function showPreview(elem) {
-        const preview = elem.nextElementSibling;
+      <footer class="contact-links" aria-label="Contact links" aria-hidden="true" inert>
+        <div class="contact-row"><a class="contact-pill contact-pill--email" href="mailto:work@alicespoon.com">work@alicespoon.com</a><a class="contact-pill contact-pill--linkedin" href="https://www.linkedin.com/in/alisa-frolova/" target="_blank" rel="noreferrer">linkedin</a></div>
+        <div class="contact-row"><a class="contact-pill contact-pill--instagram" href="https://www.instagram.com/alicespoon.design/" target="_blank" rel="noreferrer">@alicespoon.design</a><a class="contact-pill contact-pill--cv" href="/cv_alisa_frolova.pdf?v=20260929" target="_blank" rel="noreferrer">
+          <img src="/contact/assets/download.svg" width="16" height="20" alt="" />
+          <span>cv</span>
+        </a></div>
+        <a class="contact-pill back-to-top" href="#top" aria-label="Back to top" title="Back to top"><span aria-hidden="true">↑</span></a>
+      </footer>
 
-        // Make sure the preview is visible to calculate dimensions
-        preview.style.display = "block";
-        preview.style.opacity = "0";
-
-        // For videos, we need to start playing to get proper dimensions
-        if (preview.tagName === "VIDEO") {
-          preview.play();
-        }
-
-        // Wait a bit to ensure dimensions are calculated
-        setTimeout(() => {
-          // Calculate safe boundaries to ensure the asset is fully visible
-          const bottomBorder = window.innerHeight - preview.offsetHeight;
-          const rightBorder = window.innerWidth - preview.offsetWidth;
-
-          // Ensure we don't have negative values (if asset is larger than viewport)
-          const maxTop = Math.max(0, bottomBorder);
-          const maxLeft = Math.max(0, rightBorder);
-
-          // Position randomly within safe boundaries
-          preview.style.top = `${randomInteger(0, maxTop)}px`;
-          preview.style.left = `${randomInteger(0, maxLeft)}px`;
-
-          // Make it visible
-          preview.style.opacity = "1";
-        }, 50);
-      }
-
-      function hidePreview(elem) {
-        const preview = elem.nextElementSibling;
-
-        // Hide the preview
-        preview.style.display = "none";
-
-        // For videos, pause them when hidden to save resources
-        if (preview.tagName === "VIDEO") {
-          preview.pause();
-        }
-      }
-
-      // Initialize all videos on page load and set up contact links
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".thumbnail-trigger").forEach((trigger) => {
-          trigger.addEventListener("click", (event) => {
-            event.preventDefault();
-          });
-        });
-
-        // Preload videos
-        const videoThumbnails = document.querySelectorAll(
-          ".thumbnail-preview[muted]"
-        );
-        videoThumbnails.forEach((video) => {
-          if (video.tagName === "VIDEO") {
-            // Preload videos
-            video.load();
-          }
-        });
-
-        const contactMe = document.querySelector(".contact-me");
-        const links = document.querySelector(".links");
-
-        const revealContactLinks = () => {
-          links.classList.add("visible");
-          contactMe.setAttribute("aria-expanded", "true");
-        };
-
-        contactMe.addEventListener("mouseenter", revealContactLinks);
-        contactMe.addEventListener("focus", revealContactLinks);
-      });
-    </script>
+      </section>
+    </main>
   </body>
 </html>
